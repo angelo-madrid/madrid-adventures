@@ -1,0 +1,61 @@
+{
+  "version": "1.1",
+  "project": "madrid-adventures",
+  "updated": "2026-06-06",
+  "_comment": "Index of art assets. Code resolves an image URL as storage.baseUrl + asset.file. Images are NEVER overwritten: a new version gets a new filename (e.g. luna_ref_v2.png) and the pointer here is updated, so this file's Git history IS the art version history. Every asset must be generated from its character's locked referenceImage, never from the original photo.",
+
+  "storage": {
+    "provider": "supabase",
+    "baseUrl": "https://<PROJECT_REF>.supabase.co/storage/v1/object/public/comic-assets/",
+    "bucket": "comic-assets",
+    "access": "public-read",
+    "note": "Raw generator originals + source photos do NOT live here. They go to the cold archive (your Drive/disk), off-pipeline."
+  },
+
+  "vocabulary": {
+    "type": ["character", "background", "prop"],
+    "character": ["maria", "pepe", "luna"],
+    "expression": ["neutral", "happy", "excited", "scared", "sad", "crying", "surprised", "smug", "angry", "sleepy"],
+    "pose": ["standing", "walking", "running", "jumping", "falling", "sitting", "pointing", "eating", "arms-up"],
+    "facing": ["front", "back", "left", "right", "3q-left", "3q-right"]
+  },
+
+  "characters": {
+    "maria": { "displayName": "Maria", "age": 13, "referenceImage": "refs/maria_ref.png", "sourcePrompt": "refs/prompts/maria.txt", "bible": "13yo eldest, tallest. Medium skin, brown hair in a high ponytail with fringe. Teal top, dark-blue jeans, white sneakers. Cool, unimpressed: half-lidded eyes, small smirk, often holding a phone. Soft hand-painted anime look.", "locked": false },
+    "pepe":  { "displayName": "Pepe (Felipe)", "age": 12, "referenceImage": "refs/pepe_ref.png", "sourcePrompt": "refs/prompts/pepe.txt", "bible": "12yo middle child, shorter/stockier. Tan skin, messy dark-brown hair. Orange shirt with one cream stripe, green shorts, yellow shoes. Big round eyes, wide open mouth, usually mid-disaster or holding food. Soft hand-painted anime look.", "locked": false },
+    "luna":  { "displayName": "Luna", "age": 9, "referenceImage": "refs/luna_ref.png", "sourcePrompt": "refs/prompts/luna.txt", "bible": "9yo youngest, smallest. Light skin, black hair in two round buns. Blue dress with yellow star, big sparkly eyes, sweet smile. Curious and brave. Soft hand-painted anime look.", "locked": false }
+  },
+
+  "assets": [
+    { "id": "maria_neutral_front",   "file": "assets/maria/maria_neutral_front.png",   "type": "character", "character": "maria", "expression": "neutral",   "pose": "standing", "facing": "front",   "transparent": true, "tier": "base",  "status": "planned", "derivedFrom": "refs/maria_ref.png", "tags": [], "notes": "phone in hand" },
+    { "id": "maria_smug_filming",    "file": "assets/maria/maria_smug_filming.png",    "type": "character", "character": "maria", "expression": "smug",      "pose": "pointing", "facing": "3q-left", "transparent": true, "tier": "base",  "status": "planned", "derivedFrom": "refs/maria_ref.png", "tags": ["filming"], "notes": "holding phone up" },
+    { "id": "maria_surprised_arms",  "file": "assets/maria/maria_surprised_arms.png",  "type": "character", "character": "maria", "expression": "surprised", "pose": "arms-up",  "facing": "front",   "transparent": true, "tier": "base",  "status": "planned", "derivedFrom": "refs/maria_ref.png", "tags": [], "notes": "the secret jump / awe" },
+    { "id": "pepe_excited_front",    "file": "assets/pepe/pepe_excited_front.png",     "type": "character", "character": "pepe",  "expression": "excited",   "pose": "standing", "facing": "front",   "transparent": true, "tier": "base",  "status": "planned", "derivedFrom": "refs/pepe_ref.png", "tags": [], "notes": "" },
+    { "id": "pepe_excited_eating",   "file": "assets/pepe/pepe_excited_eating.png",    "type": "character", "character": "pepe",  "expression": "excited",   "pose": "eating",   "facing": "3q-left", "transparent": true, "tier": "base",  "status": "planned", "derivedFrom": "refs/pepe_ref.png", "tags": ["food"], "notes": "hands free to composite a prop" },
+    { "id": "pepe_scared_falling",   "file": "assets/pepe/pepe_scared_falling.png",    "type": "character", "character": "pepe",  "expression": "scared",    "pose": "falling",  "facing": "front",   "transparent": true, "tier": "base",  "status": "planned", "derivedFrom": "refs/pepe_ref.png", "tags": ["pratfall"], "notes": "Colosseum trip" },
+    { "id": "pepe_surprised_point",  "file": "assets/pepe/pepe_surprised_point.png",   "type": "character", "character": "pepe",  "expression": "surprised", "pose": "pointing", "facing": "front",   "transparent": true, "tier": "topup", "status": "planned", "derivedFrom": "refs/pepe_ref.png", "tags": [], "notes": "Trevi wallet / Mouth of Truth" },
+    { "id": "pepe_sad_neck",         "file": "assets/pepe/pepe_sad_neck.png",          "type": "character", "character": "pepe",  "expression": "sad",       "pose": "standing", "facing": "front",   "transparent": true, "tier": "topup", "status": "planned", "derivedFrom": "refs/pepe_ref.png", "tags": ["vatican"], "notes": "rubbing sore neck, looking up" },
+    { "id": "luna_neutral_front",    "file": "assets/luna/luna_neutral_front.png",     "type": "character", "character": "luna",  "expression": "neutral",   "pose": "standing", "facing": "front",   "transparent": true, "tier": "base",  "status": "planned", "derivedFrom": "refs/luna_ref.png", "tags": [], "notes": "" },
+    { "id": "luna_happy_arms",       "file": "assets/luna/luna_happy_arms.png",        "type": "character", "character": "luna",  "expression": "happy",     "pose": "arms-up",  "facing": "front",   "transparent": true, "tier": "base",  "status": "planned", "derivedFrom": "refs/luna_ref.png", "tags": [], "notes": "" },
+    { "id": "luna_scared_front",     "file": "assets/luna/luna_scared_front.png",      "type": "character", "character": "luna",  "expression": "scared",    "pose": "standing", "facing": "front",   "transparent": true, "tier": "base",  "status": "planned", "derivedFrom": "refs/luna_ref.png", "tags": ["spooky"], "notes": "hands near face, eyes wide" },
+    { "id": "luna_happy_falling",    "file": "assets/luna/luna_happy_falling.png",     "type": "character", "character": "luna",  "expression": "happy",     "pose": "falling",  "facing": "front",   "transparent": true, "tier": "topup", "status": "planned", "derivedFrom": "refs/luna_ref.png", "tags": ["gelato"], "notes": "tumbling into fountain" },
+    { "id": "trio_sleeping",         "file": "assets/group/trio_sleeping.png",         "type": "character", "character": "luna",  "expression": "sleepy",    "pose": "sitting",  "facing": "front",   "transparent": true, "tier": "topup", "status": "planned", "derivedFrom": "refs/luna_ref.png", "tags": ["bedtime", "group"], "notes": "three sleepy heads on pillows; generate against all three refs" }
+  ],
+
+  "backgrounds": [
+    { "id": "bg_airport_sunset",     "file": "assets/bg/airport_sunset.png",     "type": "background", "status": "planned", "tags": ["rome", "sunset", "arrival"] },
+    { "id": "bg_colosseum",          "file": "assets/bg/colosseum.png",          "type": "background", "status": "planned", "tags": ["rome", "day", "exterior"] },
+    { "id": "bg_trevi",              "file": "assets/bg/trevi.png",              "type": "background", "status": "planned", "tags": ["rome", "fountain"] },
+    { "id": "bg_spanish_steps",      "file": "assets/bg/spanish_steps.png",      "type": "background", "status": "planned", "tags": ["rome", "day", "hot"] },
+    { "id": "bg_pantheon_interior",  "file": "assets/bg/pantheon_interior.png",  "type": "background", "status": "planned", "tags": ["rome", "interior", "rain"] },
+    { "id": "bg_mouth_of_truth",     "file": "assets/bg/mouth_of_truth.png",     "type": "background", "status": "planned", "tags": ["rome", "spooky"] },
+    { "id": "bg_vatican",            "file": "assets/bg/vatican.png",            "type": "background", "status": "planned", "tags": ["rome", "interior", "ceiling"] },
+    { "id": "bg_bedroom_night",      "file": "assets/bg/bedroom_night.png",      "type": "background", "status": "planned", "tags": ["night", "interior"] }
+  ],
+
+  "props": [
+    { "id": "prop_gelato_6scoop", "file": "assets/props/gelato_6scoop.png", "type": "prop", "transparent": true, "status": "planned", "tags": ["food"] },
+    { "id": "prop_wallet",        "file": "assets/props/wallet.png",        "type": "prop", "transparent": true, "status": "planned", "tags": [] },
+    { "id": "prop_pigeon",        "file": "assets/props/pigeon.png",        "type": "prop", "transparent": true, "status": "planned", "tags": ["animal"] }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "_comment": "REGISTRY of books on the shelf. The dashboard READS this to build its tabs/covers automatically — publishing a new comic = adding/updating an entry here, never editing the dashboard shell. Owned by dashboard/FILES.md. cover/path resolve at runtime; status drives badges and gating.",
+  "site": {
+    "title": "The Madrid Adventures",
+    "tagline": "Maria, Pepe & Luna — three siblings, many worlds.",
+    "basePath": "/"
+  },
+  "statusValues": [
+    "published",
+    "in-progress",
+    "coming-soon"
+  ],
+  "stories": [
+    {
+      "id": "rome",
+      "title": "Roman Holiday",
+      "subtitle": "Maria, Pepe & Luna's Roman Holiday",
+      "blurb": "Three siblings loose in Rome — gelato disasters, a wallet in the Trevi Fountain, and the Mouth of Truth.",
+      "cover": "<cover-image-url>",
+      "path": "/stories/rome/",
+      "panels": 8,
+      "status": "in-progress",
+      "order": 1,
+      "added": "2026-06-06"
+    },
+    {
+      "id": "hogwarts",
+      "title": "The Shadow Over Hogwarts",
+      "subtitle": "A magical castle adventure",
+      "blurb": "A cursed castle, a monster gauntlet, and Luna's very own Patronus.",
+      "cover": "<cover-image-url>",
+      "path": "/stories/hogwarts/",
+      "panels": null,
+      "status": "coming-soon",
+      "order": 2,
+      "added": "2026-06-06"
+    },
+    {
+      "id": "mars",
+      "title": "Mars",
+      "subtitle": "An adventure on the red planet",
+      "blurb": "Coming soon — the siblings blast off to Mars.",
+      "cover": "<cover-image-url>",
+      "path": "/stories/mars/",
+      "panels": null,
+      "status": "coming-soon",
+      "order": 3,
+      "added": "2026-06-06"
+    }
+  ]
+}

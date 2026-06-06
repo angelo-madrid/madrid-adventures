@@ -1,0 +1,13 @@
+# secrets
+.env
+.env.local
+# dependencies / build
+node_modules/
+# raw art originals & source photos (cold archive only — never commit)
+raw/
+*.psd
+*.xcf
+*-original.*
+# os
+.DS_Store
+Thumbs.db

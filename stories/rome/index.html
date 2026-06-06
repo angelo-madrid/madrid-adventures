@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Roman Holiday — The Madrid Adventures</title>
+<meta name="description" content="Roman Holiday — Maria, Pepe & Luna's chaotic day in Rome. In production." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --paper: #fbf3e4; --ink: #3a2c20; --ink-soft: #6b5947;
+    --terracotta: #d2693f; --ochre: #e0a43b; --teal: #3f8c84;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: 'Nunito', system-ui, sans-serif; color: var(--ink);
+    background-color: var(--paper);
+    background-image:
+      radial-gradient(circle at 20% 10%, rgba(224,164,59,0.18), transparent 45%),
+      radial-gradient(circle at 82% 90%, rgba(210,105,63,0.16), transparent 45%);
+    min-height: 100vh; display: flex; align-items: center; justify-content: center;
+    padding: 28px; line-height: 1.55;
+  }
+  .panel {
+    max-width: 560px; text-align: center;
+    background: #fffdf8; border-radius: 22px; padding: 40px 34px 34px;
+    box-shadow: 0 14px 34px rgba(91,58,30,0.18); border: 1px solid rgba(138,92,52,0.14);
+  }
+  .scene { font-size: 3.4rem; margin-bottom: 6px; }
+  .badge {
+    display: inline-flex; align-items: center; gap: 7px; font-size: 0.72rem; font-weight: 800;
+    letter-spacing: 0.6px; text-transform: uppercase; padding: 5px 12px; border-radius: 999px;
+    color: #4a3414; background: var(--ochre); margin-bottom: 14px;
+  }
+  .badge::before { content:""; width:7px; height:7px; border-radius:50%; background: rgba(74,52,20,0.55); }
+  h1 {
+    font-family: 'Fredoka', cursive; font-weight: 700; color: var(--terracotta);
+    font-size: clamp(2rem, 6vw, 2.9rem); margin: 4px 0 4px; text-shadow: 1.5px 1.5px 0 #fff;
+  }
+  .sub { font-family:'Fredoka',cursive; color: var(--ink-soft); font-size: 1.1rem; margin: 0 0 18px; }
+  p.blurb { color: var(--ink-soft); margin: 0 auto 26px; max-width: 42ch; }
+  .back {
+    display: inline-flex; align-items: center; gap: 8px; text-decoration: none;
+    font-family: 'Fredoka', cursive; font-weight: 600; font-size: 1.02rem;
+    color: #fff; background: var(--teal); padding: 11px 22px; border-radius: 999px;
+    box-shadow: 0 6px 14px rgba(63,140,132,0.35); transition: transform 0.16s ease;
+  }
+  .back:hover { transform: translateY(-3px); }
+  .beats { margin: 0 0 26px; padding: 0; list-style: none; color: var(--ink-soft); font-size: 0.92rem; }
+  .beats li { display: inline-block; margin: 3px 5px; padding: 4px 10px; background: rgba(224,164,59,0.16); border-radius: 999px; }
+</style>
+</head>
+<body>
+  <main class="panel">
+    <div class="scene">🏛️🍕</div>
+    <span class="badge">In production</span>
+    <h1>Roman Holiday</h1>
+    <p class="sub">Maria, Pepe &amp; Luna's Roman Holiday</p>
+    <p class="blurb">Three siblings loose in Rome — gelato disasters, a wallet in the Trevi
+      Fountain, and the Mouth of Truth. The panels are being painted right now.</p>
+    <ul class="beats">
+      <li>Arrival</li><li>Colosseum</li><li>Trevi Fountain</li><li>Spanish Steps</li>
+      <li>Pantheon</li><li>Mouth of Truth</li><li>Vatican</li><li>Bedtime</li>
+    </ul>
+    <div>
+      <a class="back" href="../../">← Back to the shelf</a>
+    </div>
+  </main>
+</body>
+</html>
