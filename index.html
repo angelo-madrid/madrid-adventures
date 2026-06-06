@@ -68,12 +68,37 @@
     padding: 18px 12px 8px;
   }
 
+  /* real character avatars — Maria → Pepe → Luna */
   .mascot {
-    width: 132px;
-    height: auto;
-    margin: 0 auto 6px;
-    display: block;
-    filter: drop-shadow(0 6px 10px rgba(91, 58, 30, 0.18));
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 0;
+    margin: 0 auto 10px;
+  }
+  .mascot .avatar {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: #fbf3e4;
+    border: 4px solid #fffdf8;               /* soft white ring */
+    box-shadow: 0 6px 14px rgba(91, 58, 30, 0.22);
+    margin-left: -14px;                       /* gentle overlap */
+    transition: transform 0.18s ease;
+  }
+  .mascot .avatar:first-child { margin-left: 0; }
+  .mascot .avatar:hover { transform: translateY(-4px) scale(1.05); z-index: 2; }
+  /* layer left-to-right so the overlap reads cleanly */
+  .mascot .avatar:nth-child(1) { z-index: 3; }
+  .mascot .avatar:nth-child(2) { z-index: 2; }
+  .mascot .avatar:nth-child(3) { z-index: 1; }
+
+  @media (max-width: 520px) {
+    .mascot .avatar { width: 56px; height: 56px; border-width: 3px; margin-left: -11px; }
+  }
+  @media print {
+    .mascot .avatar { box-shadow: none; }
   }
 
   h1.site-title {
@@ -281,44 +306,12 @@
 <body>
   <div class="wrap">
     <header class="site">
-      <!-- three siblings mascot: Maria, Pepe, Luna as simple painted shapes -->
-      <svg class="mascot" viewBox="0 0 160 110" role="img" aria-label="Maria, Pepe and Luna">
-        <!-- Maria (tallest, teal top, ponytail) -->
-        <g transform="translate(30,8)">
-          <ellipse cx="0" cy="92" rx="20" ry="5" fill="rgba(91,58,30,0.12)"/>
-          <rect x="-13" y="46" width="26" height="42" rx="11" fill="#3f8c84"/>
-          <circle cx="0" cy="30" r="17" fill="#e9b690"/>
-          <path d="M-17 28 q3 -22 17 -22 q14 0 17 22 q-8 -10 -17 -10 q-9 0 -17 10z" fill="#5a3d23"/>
-          <path d="M14 24 q12 4 9 26 q-6 -4 -9 -12z" fill="#5a3d23"/>
-          <circle cx="-6" cy="30" r="2" fill="#3a2c20"/>
-          <circle cx="6" cy="30" r="2" fill="#3a2c20"/>
-          <path d="M-5 38 q5 3 10 0" stroke="#a8694a" stroke-width="2" fill="none" stroke-linecap="round"/>
-        </g>
-        <!-- Pepe (shorter, orange shirt) -->
-        <g transform="translate(80,22)">
-          <ellipse cx="0" cy="78" rx="19" ry="5" fill="rgba(91,58,30,0.12)"/>
-          <rect x="-13" y="38" width="26" height="38" rx="11" fill="#e07a32"/>
-          <rect x="-13" y="50" width="26" height="5" fill="#f6e7cf"/>
-          <circle cx="0" cy="24" r="16" fill="#d99b6c"/>
-          <path d="M-16 22 q4 -19 16 -19 q12 0 16 19 q-8 -11 -16 -11 q-8 0 -16 11z" fill="#4a3018"/>
-          <circle cx="-6" cy="24" r="2.4" fill="#3a2c20"/>
-          <circle cx="6" cy="24" r="2.4" fill="#3a2c20"/>
-          <ellipse cx="0" cy="32" rx="5" ry="4" fill="#7a3b22"/>
-        </g>
-        <!-- Luna (smallest, blue dress, two buns) -->
-        <g transform="translate(126,34)">
-          <ellipse cx="0" cy="66" rx="16" ry="4" fill="rgba(91,58,30,0.12)"/>
-          <path d="M-12 64 L-9 34 q9 -6 18 0 L12 64 z" fill="#4f7bd0"/>
-          <polygon points="0,44 2,49 7,49 3,52 5,57 0,54 -5,57 -3,52 -7,49 -2,49" fill="#e0a43b"/>
-          <circle cx="0" cy="22" r="14" fill="#eac3a0"/>
-          <circle cx="-12" cy="14" r="6" fill="#2b2320"/>
-          <circle cx="12" cy="14" r="6" fill="#2b2320"/>
-          <path d="M-13 20 q3 -14 13 -14 q10 0 13 14 q-7 -8 -13 -8 q-6 0 -13 8z" fill="#2b2320"/>
-          <circle cx="-5" cy="22" r="2.2" fill="#3a2c20"/>
-          <circle cx="5" cy="22" r="2.2" fill="#3a2c20"/>
-          <path d="M-4 28 q4 4 8 0" stroke="#b9745a" stroke-width="2" fill="none" stroke-linecap="round"/>
-        </g>
-      </svg>
+      <!-- the three siblings — real character avatars (Maria → Pepe → Luna) -->
+      <div class="mascot" role="img" aria-label="Maria, Pepe and Luna">
+        <img class="avatar" src="dashboard/assets/maria_avatar.png" alt="Maria" width="72" height="72" />
+        <img class="avatar" src="dashboard/assets/pepe_avatar.png" alt="Pepe" width="72" height="72" />
+        <img class="avatar" src="dashboard/assets/luna_avatar.png" alt="Luna" width="72" height="72" />
+      </div>
       <h1 class="site-title" id="siteTitle">The Madrid Adventures</h1>
       <p class="tagline" id="siteTagline">Loading the shelf…</p>
       <div class="rule"></div>
