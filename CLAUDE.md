@@ -65,9 +65,15 @@ and lettering → ChatGPT only.
 
 Each panel is generated independently, so consistency is engineered into every prompt:
 
-- **HARD ANCHORS (never drift):** each sibling's FACE, and the HEIGHT/AGE order —
-  **Maria ~13 (tallest) > Pepe ~12 (a little shorter) > Luna ~9 (a little shorter)**, with
-  only *small* gaps between them (Luna is 9, not a toddler — do not let her shrink).
+- **HARD ANCHORS (never drift):** each sibling's FACE, and the HEIGHT order, calibrated to
+  these **proven landmarks against Maria** (she is the tallest yardstick):
+  **Pepe's head = Maria's FOREHEAD; Luna's head = Maria's EYEBROW.** All three heads sit in
+  a narrow band near the top — three similarly-tall siblings, NOT one big + two small.
+- **HEIGHT RENDERING TRICK:** prompt the cast as render-ages **"about 13, 12, and 12"** (not
+  9) — the model treats "9" as "much smaller" and shrinks Luna, so we lie about her rendering
+  age to hold her height. This is a pixels-only dial; **canonical age stays: Maria 13, Pepe
+  12, Luna 9** (story text + pages.json keep the real ages). Use magnitude words ("much
+  taller, not slightly") since the model under-applies height edits.
 - **OUTFITS are always stated explicitly in the prompt — never left to the model.** The
   default look for each character is in `characters/manifest.json`. To keep them consistent,
   restate those looks every panel. To deliberately change an outfit for a scene, state the
@@ -81,10 +87,13 @@ Each panel is generated independently, so consistency is engineered into every p
 Use the three attached character references as the on-model designs for the SAME three
 siblings — match their FACES and their outfits exactly as described.
 
-AGES & HEIGHTS (anchor proportions to these ages; gentle stair-step, small gaps):
-- MARIA ~13 — tallest.
-- PEPE ~12 — just a little shorter than Maria.
-- LUNA ~9 — just a little shorter than Pepe. (Do NOT make Luna tiny.)
+AGES & HEIGHTS (render-age trick — say 13/12/12 to stop Luna shrinking; canon age stays 9):
+The three children are CLOSE in age, about 13, 12, and 12, and NEARLY THE SAME HEIGHT.
+- MARIA — tallest (the height yardstick).
+- PEPE — his head reaches MARIA'S FOREHEAD (only a little shorter than Maria).
+- LUNA — her head reaches MARIA'S EYEBROW (only a little shorter than Pepe).
+All three heads sit in a NARROW band near the top — three similarly-tall siblings, NOT one
+big kid and two little ones. If unsure, make them TALLER, not shorter.
 
 LOCKED CHARACTER LOOKS:
 - MARIA: teal t-shirt, dark-blue jeans, teal sneakers, long black hair with a fringe.
