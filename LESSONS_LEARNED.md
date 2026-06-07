@@ -109,3 +109,13 @@ recognize themselves from the whole package, and can focus on the story.
   front pose) so the face is the only variable across the three.
 - **Rome's 8 panels stay as published** (old faces) — not re-rendered. The new look starts from
   the next thing generated (cover / Hogwarts).
+
+## Canon v1.1 — Maria recast (deliberate franchise-level decision)
+
+- **2026-06-07:** Maria recast from "pretends to be unimpressed / phone-camera motif" to
+  **curious, adventurous, proactive — the first to lean in and lead; no phone.** This intentionally
+  touches the LOCKED Production Bible (character canon), which is exactly the kind of change the
+  governance model permits — by deliberate decision, not drift. Manifest, `docs/CHATGPT_CONTEXT.md`,
+  and `HANDOFF.md` updated together so no future session regenerates old-Maria. Maria's recurring
+  motif is now **TBD** (explorer's notebook is a candidate; no new prop locked yet). *(starts from
+  Hogwarts; Rome stays as published.)*

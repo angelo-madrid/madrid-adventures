@@ -1,5 +1,5 @@
 # Madrid Adventures — Production Bible
-**Version 1.0 · Status: LOCKED** · Baseline established after *Roman Holiday*.
+**Version 1.1 · Status: LOCKED** · Baseline established after *Roman Holiday*. (v1.1 recasts Maria — see cast.)
 
 This is the authoritative production reference for all Madrid Adventures sessions. The LOCKED canon below (roles, character canon, height canon, workflow, QA ownership) stays stable unless there is a deliberate franchise-level decision. New techniques and discoveries go in **LESSONS_LEARNED.md**, not here — so the Bible doesn't churn.
 
@@ -36,25 +36,34 @@ or character designs.
 
 ---
 
-## The cast — FACES + HEIGHT are the hard locks
+## The cast — FACES + HEIGHT are the consistency anchors
+
+**CHARACTER MODEL SHEETS:** the three attached reference faces ARE the official, canonical
+designs — `maria_ref` = Maria, `pepe_ref` = Pepe, `luna_ref` = Luna. Treat them like an
+animation studio's model sheets: every panel's faces and hair come from these references.
+The goal is **consistent and clearly RECOGNIZABLE as each kid — NOT photographic likeness.**
+Don't fight for exact real-face accuracy; a recognizable, on-style face is the target. (The
+refs show the kids in blue shirts on white — that's just the reference format; ignore those
+and use the outfit the prompt specifies.)
 
 Faces and relative height must stay consistent across every panel. Outfits are stated in each
-prompt (don't improvise wardrobe). Reference images are attached to every prompt — match the
-faces and proportions to them.
+prompt (don't improvise wardrobe).
 
 **Personalities (draw expressions/body language to match — these are fixed across all books):**
-- **MARIA** — responsible, observant, often filming/documenting; pretends to be unimpressed but
-  secretly loves it. Tends toward cool, wry, fond looks.
+- **MARIA** — responsible, observant, and a natural leader; curious, adventurous, and proactive —
+  the first to lean in, explore, and push the group forward. Openly engaged and eager. Tends
+  toward bright, alert, determined expressions.
 - **PEPE** — curious, mischievous, accident-prone; the cause of most comic chaos. Big animated
   expressions, often mid-blunder.
 - **LUNA** — openly excited, curious, the most expressive; wide eyes, big smiles, asking questions.
 
-**Recurring motifs (optional, not required every panel):** Maria a phone/camera, Pepe a
-guidebook, Luna a small backpack. Include them when natural — don't force them.
+**Recurring motifs (optional, not required every panel):** Pepe a guidebook, Luna a small
+backpack. (Maria's motif is TBD — the phone/camera was retired in v1.1; an explorer's notebook is
+a candidate.) Include them when natural — don't force them.
 
 **Default looks (used unless a prompt says otherwise):**
 - **MARIA** — eldest girl. Long black hair with a fringe. Teal t-shirt, dark-blue jeans, teal
-  sneakers. Warm, a little too-cool.
+  sneakers. Warm, eager, bold.
 - **PEPE** — middle, a boy. Short tousled dark hair. Orange t-shirt with a cream/white
   horizontal stripe, green cargo shorts, blue sneakers. Cheerful, mischief-prone.
 - **LUNA** — youngest girl. Dark hair in a ponytail. Yellow t-shirt, dark pants, brown shoes.

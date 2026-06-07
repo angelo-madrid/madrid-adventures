@@ -1,7 +1,8 @@
 {
   "version": "1.1",
   "project": "madrid-adventures",
-  "updated": "2026-06-06",
+  "updated": "2026-06-07",
+  "canonNote": "v1.1 — Maria recast: curious/adventurous/proactive; phone-camera motif retired.",
   "_comment": "Index of art assets. Code resolves an image URL as storage.baseUrl + asset.file. Images are NEVER overwritten: a new version gets a new filename (e.g. luna_ref_v2.png) and the pointer here is updated, so this file's Git history IS the art version history. Every asset must be generated from its character's locked referenceImage, never from the original photo.",
   "storage": {
     "provider": "supabase",
@@ -64,8 +65,8 @@
       "heightRank": 1,
       "defaultOutfit": "teal t-shirt, dark-blue jeans, teal sneakers",
       "hair": "long black hair with a fringe",
-      "personality": "Responsible, observant; often documenting the trip. Pretends to be unimpressed but secretly loves the adventure.",
-      "motif": "phone / camera (recurring, optional)",
+      "personality": "Responsible, observant, natural leader; curious, adventurous, and proactive — the first to lean in, explore, and push the group forward. Openly engaged and eager.",
+      "motif": "TBD (notebook candidate)",
       "referenceVersion": "v3 — standardized stylized set (blue shirt, white bg, straight pose); recognizable not photographic"
     },
     "pepe": {
