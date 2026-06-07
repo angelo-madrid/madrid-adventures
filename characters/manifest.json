@@ -63,7 +63,9 @@
       "locked": true,
       "heightRank": 1,
       "defaultOutfit": "teal t-shirt, dark-blue jeans, teal sneakers",
-      "hair": "long black hair with a fringe"
+      "hair": "long black hair with a fringe",
+      "personality": "Responsible, observant; often documenting the trip. Pretends to be unimpressed but secretly loves the adventure.",
+      "motif": "phone / camera (recurring, optional)"
     },
     "pepe": {
       "displayName": "Pepe (Felipe)",
@@ -74,7 +76,9 @@
       "locked": true,
       "heightRank": 2,
       "defaultOutfit": "orange t-shirt with a cream/white horizontal stripe, green cargo shorts, blue sneakers",
-      "hair": "short tousled dark hair"
+      "hair": "short tousled dark hair",
+      "personality": "Curious, mischievous, accident-prone — creates many of the comic situations. Enthusiastic explorer.",
+      "motif": "travel guidebook (recurring, optional)"
     },
     "luna": {
       "displayName": "Luna",
@@ -85,7 +89,9 @@
       "locked": true,
       "heightRank": 3,
       "defaultOutfit": "yellow t-shirt, dark pants, brown shoes",
-      "hair": "dark hair in a ponytail"
+      "hair": "dark hair in a ponytail",
+      "personality": "Openly excited and curious; frequently asks questions; most expressive of the three; embraces discovery.",
+      "motif": "small backpack / travel accessory (recurring, optional)"
     }
   },
   "assets": [
@@ -417,5 +423,6 @@
       ]
     }
   ],
-  "_consistency_rule": "HARD ANCHORS: faces + height/age order (Maria ~13 tallest > Pepe ~12 > Luna ~9, small gaps, Luna not tiny). Outfits are ALWAYS stated explicitly in each panel prompt and default to the looks above; the model never improvises wardrobe. See CLAUDE.md for the reusable prompt header."
+  "_consistency_rule": "HARD ANCHORS: faces + height/age order (Maria ~13 tallest > Pepe ~12 > Luna ~9, small gaps, Luna not tiny). Outfits are ALWAYS stated explicitly in each panel prompt and default to the looks above; the model never improvises wardrobe. See CLAUDE.md for the reusable prompt header.",
+  "_personality_note": "Personalities are story canon and stay consistent across ALL books. Recurring motifs are gentle, optional anchors — NOT required in every panel."
 }

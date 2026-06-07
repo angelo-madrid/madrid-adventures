@@ -7,6 +7,20 @@ books), the doc model, the shared cast, and how to make a comic. For component d
 
 ---
 
+## Governance — Production Bible v1.0 (LOCKED)
+
+The production canon is **locked at v1.0** (baseline after *Roman Holiday*). **LOCKED** (change
+only by deliberate franchise-level decision): character canon, height canon, roles &
+responsibilities, production workflow, QA ownership. **EVOLVING** (add freely): new techniques
+and discoveries → `LESSONS_LEARNED.md`. The pasteable session version of the Bible for ChatGPT
+is `docs/CHATGPT_CONTEXT.md`. This keeps the foundation stable while the craft keeps improving.
+
+## Where it lives (LOCKED — coordinates rarely change)
+
+- **Repo URL:** https://github.com/angelo-madrid/madrid-adventures
+- **Live (GitHub Pages) URL:** https://angelo-madrid.github.io/madrid-adventures/
+- **Pages source:** `main` branch, `/` (root)
+
 ## What this project is
 
 **The Madrid Adventures** is a **bookshelf of comic adventures** starring the same three
@@ -47,15 +61,28 @@ madrid-adventures/
 
 ---
 
-## 1. Tool roles
+## 1. Roles — the human leads; the models are specialized collaborators
 
-| Surface | Role |
-|---|---|
-| **Claude chat** | Story + storyline; storyboard/blueprint; writes ChatGPT panel prompts; consistency QA on generated panels; mechanical image ops (crop/resize/optimize) |
-| **ChatGPT (GPT Image)** | Generates the complete painted panel including all lettering; conversational edits |
-| **Claude Code** | Owns Git: name/store panels, commit, push, GitHub Pages |
-| **Claude Design** | Optional: explore looks / repackage to PDF/PPTX (research-preview) |
+**The HUMAN is the Creative Director, Art Director, Editor-in-Chief, QA Lead, and Publisher.**
+The models execute within that direction. The objective is not to maximize any one model's
+use — it's to maximize story quality, character consistency, reader enjoyment, educational
+value, and publishing reliability, by assigning each task to the best-suited tool.
 
+| Party | Role | Owns |
+|---|---|---|
+| **Human** | Creative Director / Editor-in-Chief / **Final QA Authority** | Story, character, visual, continuity & publishing **approval** — the final decision-maker |
+| **Claude chat** | Story Architect | Story bible, character behavior, narrative canon; chapter/scene planning, dialogue, running jokes; **prompt drafting**; QA *assist* (checks panels against the bible) |
+| **ChatGPT (GPT Image)** | Visual Production (Production Artist) | Image generation + editing, visual refinement, layout & bubble execution; *assists* drift detection. **Does NOT own final QA.** |
+| **Claude Code** | Production Engineer | Repo structure, HTML/CSS/JS, asset management, build automation, Git ops, GitHub Pages deploy |
+| **Claude Design** | Optional | Explore looks / repackage to PDF/PPTX (research-preview) |
+
+**Decision authority:** Narrative direction → Human + Claude chat · Visual *direction* →
+Human · Visual *execution* → ChatGPT · Engineering → Claude Code · **Final QA & publication
+approval → Human.**
+
+Important lesson from the Rome build: the **human caught essentially all the drift** (height,
+outfit, face, prop, dialogue, bubble placement). A generator cannot reliably QA its own
+output for the consistency problems it creates — so models *assist* QA, they do not *own* it.
 Mechanical image ops (crop/resize/optimize/convert) → Claude code. Painting, retouching,
 and lettering → ChatGPT only.
 
@@ -140,6 +167,24 @@ small additions → an edit pass is fine.
 - Cast is shared canon (refs + bibles in `characters/manifest.json`), referenced by every story.
 - Add a story: create `stories/<id>/` (SPEC/FILES/BACKLOG + pages.json), run the §3 pipeline
   per panel, generate a cover, add one entry to `stories.json`. The shelf auto-shows it.
+
+### Character canon (personalities — lock across ALL books)
+Visual drift gets the attention, but **personality drift is the bigger long-term risk** as the
+series grows. Keep these consistent everywhere:
+- **Maria** — responsible, observant, often documenting the trip; pretends to be unimpressed but
+  secretly loves the adventure.
+- **Pepe** — curious, mischievous, accident-prone; creates many of the comic situations;
+  enthusiastic explorer.
+- **Luna** — openly excited and curious; asks lots of questions; the most expressive of the three.
+
+**Recurring motifs (optional, gentle):** Maria a phone/camera, Pepe a guidebook, Luna a small
+backpack. Let them appear often enough that readers associate them with each kid — but they are
+NOT required in every panel; don't turn them into a consistency chore.
+
+### Story philosophy
+Madrid Adventures is **not a sequence of travel postcards.** Every scene should ideally carry at
+least one of: **humor · discovery · character interaction · educational value · a running joke.**
+The strongest scenes combine several. Use this as the editorial bar when planning panels.
 
 ---
 
