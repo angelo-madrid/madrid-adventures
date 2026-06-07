@@ -1,73 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Roman Holiday — The Madrid Adventures</title>
-<meta name="description" content="Roman Holiday — Maria, Pepe & Luna's chaotic day in Rome. In production." />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Baloo+2:wght@600;700&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --paper: #fbf3e4; --ink: #3a2c20; --ink-soft: #6b5947;
-    --terracotta: #d2693f; --ochre: #e0a43b; --teal: #3f8c84;
+  :root{
+    --ink:#2b1d12; --cream:#fdf3df; --terra:#c8553d; --ochre:#e9c46a; --gold:#f4a259;
+    --paper:#fbe6c8;
   }
-  * { box-sizing: border-box; }
-  html, body { margin: 0; padding: 0; }
-  body {
-    font-family: 'Nunito', system-ui, sans-serif; color: var(--ink);
-    background-color: var(--paper);
-    background-image:
-      radial-gradient(circle at 20% 10%, rgba(224,164,59,0.18), transparent 45%),
-      radial-gradient(circle at 82% 90%, rgba(210,105,63,0.16), transparent 45%);
-    min-height: 100vh; display: flex; align-items: center; justify-content: center;
-    padding: 28px; line-height: 1.55;
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    font-family:'Fredoka',sans-serif; color:var(--ink);
+    background:
+      radial-gradient(circle at 50% -10%, #fbe7c0 0%, transparent 60%),
+      linear-gradient(165deg,#f7e7c4,#f1d6a3);
+    min-height:100vh; padding:0 0 80px;
   }
-  .panel {
-    max-width: 560px; text-align: center;
-    background: #fffdf8; border-radius: 22px; padding: 40px 34px 34px;
-    box-shadow: 0 14px 34px rgba(91,58,30,0.18); border: 1px solid rgba(138,92,52,0.14);
+  /* top bar */
+  .bar{
+    position:sticky; top:0; z-index:30; display:flex; align-items:center; gap:14px;
+    padding:14px clamp(16px,4vw,40px);
+    background:rgba(253,243,223,.82); backdrop-filter:blur(10px);
+    border-bottom:2px solid rgba(43,29,18,.12);
   }
-  .scene { font-size: 3.4rem; margin-bottom: 6px; }
-  .badge {
-    display: inline-flex; align-items: center; gap: 7px; font-size: 0.72rem; font-weight: 800;
-    letter-spacing: 0.6px; text-transform: uppercase; padding: 5px 12px; border-radius: 999px;
-    color: #4a3414; background: var(--ochre); margin-bottom: 14px;
+  .back{
+    display:inline-flex; align-items:center; gap:7px; text-decoration:none;
+    font-weight:600; font-size:15px; color:var(--ink);
+    background:#fff; border:2px solid var(--ink); border-radius:30px; padding:6px 15px;
+    box-shadow:2px 2px 0 rgba(43,29,18,.2); transition:transform .12s;
   }
-  .badge::before { content:""; width:7px; height:7px; border-radius:50%; background: rgba(74,52,20,0.55); }
-  h1 {
-    font-family: 'Fredoka', cursive; font-weight: 700; color: var(--terracotta);
-    font-size: clamp(2rem, 6vw, 2.9rem); margin: 4px 0 4px; text-shadow: 1.5px 1.5px 0 #fff;
+  .back:hover{transform:translate(-1px,-1px);}
+  .bar .crumb{font-size:14px; opacity:.7;}
+  .bar .crumb b{color:var(--terra);}
+
+  /* hero */
+  header.hero{text-align:center; padding:48px 20px 26px;}
+  header.hero .kicker{
+    font-size:14px; letter-spacing:3px; text-transform:uppercase; color:var(--terra);
+    font-weight:700; margin-bottom:8px;
   }
-  .sub { font-family:'Fredoka',cursive; color: var(--ink-soft); font-size: 1.1rem; margin: 0 0 18px; }
-  p.blurb { color: var(--ink-soft); margin: 0 auto 26px; max-width: 42ch; }
-  .back {
-    display: inline-flex; align-items: center; gap: 8px; text-decoration: none;
-    font-family: 'Fredoka', cursive; font-weight: 600; font-size: 1.02rem;
-    color: #fff; background: var(--teal); padding: 11px 22px; border-radius: 999px;
-    box-shadow: 0 6px 14px rgba(63,140,132,0.35); transition: transform 0.16s ease;
+  header.hero h1{
+    font-family:'Baloo 2',cursive; font-size:clamp(40px,9vw,84px); line-height:.95;
+    color:var(--terra); text-shadow:3px 3px 0 var(--ochre), 6px 6px 0 rgba(43,29,18,.25);
+    transform:rotate(-1.5deg);
   }
-  .back:hover { transform: translateY(-3px); }
-  .beats { margin: 0 0 26px; padding: 0; list-style: none; color: var(--ink-soft); font-size: 0.92rem; }
-  .beats li { display: inline-block; margin: 3px 5px; padding: 4px 10px; background: rgba(224,164,59,0.16); border-radius: 999px; }
+  header.hero p{margin-top:16px; font-size:clamp(15px,2.6vw,19px); opacity:.8;}
+  .divider{width:90px; height:7px; margin:22px auto 0; border-radius:6px;
+    background:repeating-linear-gradient(90deg,var(--terra) 0 12px,var(--gold) 12px 24px);}
+
+  /* panels */
+  .reel{max-width:920px; margin:10px auto 0; padding:0 clamp(14px,4vw,28px);
+        display:flex; flex-direction:column; gap:clamp(26px,5vw,48px);}
+  .panel{
+    position:relative; background:#fff; border:3px solid var(--ink); border-radius:14px;
+    overflow:hidden; box-shadow:0 14px 0 -6px rgba(43,29,18,.18), 8px 8px 0 rgba(43,29,18,.1);
+    opacity:0; transform:translateY(26px); animation:rise .6s ease forwards;
+  }
+  @keyframes rise{to{opacity:1; transform:none;}}
+  .panel img{display:block; width:100%; height:auto;}
+  .panel .num{
+    position:absolute; top:12px; left:12px; z-index:3;
+    font-family:'Baloo 2',cursive; font-weight:700; font-size:15px;
+    background:var(--ink); color:var(--cream); width:34px; height:34px; border-radius:50%;
+    display:grid; place-items:center; box-shadow:2px 2px 0 rgba(43,29,18,.3);
+  }
+  /* the end */
+  .end{text-align:center; margin:54px auto 0; max-width:680px; padding:0 20px;}
+  .end .stamp{
+    display:inline-block; font-family:'Baloo 2',cursive; font-weight:700;
+    font-size:clamp(26px,6vw,44px); color:#fff; background:var(--terra);
+    padding:10px 34px; border-radius:40px; transform:rotate(-2deg);
+    box-shadow:4px 4px 0 rgba(43,29,18,.3); border:3px solid var(--ink);
+  }
+  .end p{margin-top:20px; font-size:16px; opacity:.78;}
+  .end .next{
+    margin-top:26px; display:inline-flex; gap:10px; flex-wrap:wrap; justify-content:center;
+  }
+  .end .chip{font-size:13px; background:#fff; border:2px dashed var(--ink); border-radius:30px;
+    padding:7px 15px; opacity:.85;}
+  footer{text-align:center; margin-top:50px; font-size:14px; opacity:.7;}
+  footer b{color:var(--terra);}
 </style>
 </head>
 <body>
-  <main class="panel">
-    <div class="scene">🏛️🍕</div>
-    <span class="badge">In production</span>
+  <nav class="bar">
+    <a class="back" href="../../index.html">← Bookshelf</a>
+    <span class="crumb">The Madrid Adventures · <b>Roman Holiday</b></span>
+  </nav>
+
+  <header class="hero">
+    <div class="kicker">A Madrid Adventure</div>
     <h1>Roman Holiday</h1>
-    <p class="sub">Maria, Pepe &amp; Luna's Roman Holiday</p>
-    <p class="blurb">Three siblings loose in Rome — gelato disasters, a wallet in the Trevi
-      Fountain, and the Mouth of Truth. The panels are being painted right now.</p>
-    <ul class="beats">
-      <li>Arrival</li><li>Colosseum</li><li>Trevi Fountain</li><li>Spanish Steps</li>
-      <li>Pantheon</li><li>Mouth of Truth</li><li>Vatican</li><li>Bedtime</li>
-    </ul>
-    <div>
-      <a class="back" href="../../">← Back to the shelf</a>
+    <p>Maria, Pepe &amp; Luna take on Rome — one disaster at a time.</p>
+    <div class="divider"></div>
+  </header>
+
+  <main class="reel" id="reel"><!-- panels injected --></main>
+
+  <section class="end">
+    <span class="stamp">The End</span>
+    <p>Sunburned, stuffed, and happy — three little Romans.</p>
+    <div class="next">
+      <span class="chip">Up next: The Shadow Over Hogwarts</span>
+      <span class="chip">Then: Mars</span>
     </div>
-  </main>
+  </section>
+
+  <footer>Maria · Pepe · Luna — <b>three siblings, many worlds.</b></footer>
+
+<script>
+// Load the story data and render panels in order. Falls back to a static list
+// if pages.json can't be fetched (e.g. opened from file://).
+const FALLBACK = [
+  "panels/p1-arrival.webp","panels/p2-colosseum.webp","panels/p3-trevi.webp",
+  "panels/p4-spanish-steps.webp","panels/p5-pantheon.webp","panels/p6-mouth-of-truth.webp",
+  "panels/p7-vatican.webp","panels/p8-bedtime.webp"
+];
+function render(list){
+  const reel=document.getElementById('reel');
+  list.forEach((src,i)=>{
+    const fig=document.createElement('figure');
+    fig.className='panel';
+    fig.style.animationDelay=(i*0.06)+'s';
+    fig.innerHTML='<span class="num">'+(i+1)+'</span>'+
+      '<img loading="lazy" src="'+src+'" alt="Roman Holiday — panel '+(i+1)+'">';
+    reel.appendChild(fig);
+  });
+}
+fetch('pages.json')
+  .then(r=>r.ok?r.json():Promise.reject())
+  .then(d=>{
+    const imgs=(d.pages||[]).filter(p=>p.art).map(p=>p.art);
+    render(imgs.length?imgs:FALLBACK);
+  })
+  .catch(()=>render(FALLBACK));
+</script>
 </body>
 </html>

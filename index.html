@@ -250,6 +250,7 @@
     background: rgba(255,255,255,0.9);
   }
   .badge.published   { background: var(--teal); }
+  .badge.ready       { background: #4f9d6b; }   /* "Read Now" — inviting call-to-action */
   .badge.in-progress { background: var(--ochre); color: #4a3414; }
   .badge.in-progress::before { background: rgba(74,52,20,0.6); }
   .badge.coming-soon { background: var(--plum); }
@@ -361,8 +362,11 @@
     return path.replace(/^\/+/, '');
   }
 
+  // Default badge text per status. An entry's own `statusLabel` (e.g. "Read Now")
+  // overrides this when present.
   const STATUS_LABEL = {
     'published': 'Published',
+    'ready': 'Read Now',
     'in-progress': 'In progress',
     'coming-soon': 'Coming soon'
   };
@@ -413,7 +417,9 @@
     const tag = isComingSoon ? 'div' : 'a';
     const attrs = { class: 'card' + (isComingSoon ? ' disabled' : '') };
     if (!isComingSoon) {
-      attrs.href = toRelative(story.path);
+      // Prefer an explicit `href` (relative to this page); fall back to the
+      // registry `path` (absolute, made relative for project Pages).
+      attrs.href = story.href || toRelative(story.path);
     } else {
       attrs['aria-disabled'] = 'true';
       attrs.title = story.title + ' — coming soon';
@@ -429,7 +435,7 @@
     const statusClass = (story.status || 'coming-soon');
     body.append(el('span',
       { class: 'badge ' + statusClass },
-      STATUS_LABEL[statusClass] || statusClass));
+      story.statusLabel || STATUS_LABEL[statusClass] || statusClass));
     card.append(body);
 
     if (isComingSoon) card.append(el('span', { class: 'lock' }, '🔒 Soon'));

@@ -19,9 +19,11 @@
       "cover": "<cover-image-url>",
       "path": "/stories/rome/",
       "panels": 8,
-      "status": "in-progress",
+      "status": "ready",
       "order": 1,
-      "added": "2026-06-06"
+      "added": "2026-06-06",
+      "statusLabel": "Read Now",
+      "href": "stories/rome/index.html"
     },
     {
       "id": "hogwarts",
