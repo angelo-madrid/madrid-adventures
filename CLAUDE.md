@@ -65,10 +65,11 @@ and lettering → ChatGPT only.
 
 Each panel is generated independently, so consistency is engineered into every prompt:
 
-- **HARD ANCHORS (never drift):** each sibling's FACE, and the HEIGHT order, calibrated to
-  these **proven landmarks against Maria** (she is the tallest yardstick):
-  **Pepe's head = Maria's FOREHEAD; Luna's head = Maria's EYEBROW.** All three heads sit in
-  a narrow band near the top — three similarly-tall siblings, NOT one big + two small.
+- **HARD ANCHORS (never drift):** each sibling's FACE, and the HEIGHT order, given two ways
+  (use BOTH — percentages are most reliable, landmarks are the visual check):
+  **Maria = 100% (tallest yardstick); Pepe = 97% of Maria (head at her FOREHEAD); Luna = 93%
+  of Maria (head at her EYEBROW).** All three heads sit in a narrow band near the top — three
+  similarly-tall siblings, NOT one big + two small.
 - **HEIGHT RENDERING TRICK:** prompt the cast as render-ages **"about 13, 12, and 12"** (not
   9) — the model treats "9" as "much smaller" and shrinks Luna, so we lie about her rendering
   age to hold her height. This is a pixels-only dial; **canonical age stays: Maria 13, Pepe
@@ -89,11 +90,11 @@ siblings — match their FACES and their outfits exactly as described.
 
 AGES & HEIGHTS (render-age trick — say 13/12/12 to stop Luna shrinking; canon age stays 9):
 The three children are CLOSE in age, about 13, 12, and 12, and NEARLY THE SAME HEIGHT.
-- MARIA — tallest (the height yardstick).
-- PEPE — his head reaches MARIA'S FOREHEAD (only a little shorter than Maria).
-- LUNA — her head reaches MARIA'S EYEBROW (only a little shorter than Pepe).
+- MARIA — tallest; the 100% height reference.
+- PEPE — 97% of Maria's height; his head reaches MARIA'S FOREHEAD.
+- LUNA — 93% of Maria's height; her head reaches MARIA'S EYEBROW.
 All three heads sit in a NARROW band near the top — three similarly-tall siblings, NOT one
-big kid and two little ones. If unsure, make them TALLER, not shorter.
+big kid and two little ones. Never portray Pepe or Luna as significantly smaller children.
 
 LOCKED CHARACTER LOOKS:
 - MARIA: teal t-shirt, dark-blue jeans, teal sneakers, long black hair with a fringe.
