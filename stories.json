@@ -27,15 +27,17 @@
     },
     {
       "id": "hogwarts",
-      "title": "The Shadow Over Hogwarts",
+      "title": "The Shadow Over the Old Castle",
       "subtitle": "A magical castle adventure",
-      "blurb": "A cursed castle, a monster gauntlet, and Luna's very own Patronus.",
+      "blurb": "A cursed castle, a monster gauntlet, and Luna's very own silver fox.",
       "cover": "<cover-image-url>",
       "path": "/stories/hogwarts/",
-      "panels": null,
-      "status": "coming-soon",
+      "panels": 8,
+      "status": "ready",
       "order": 2,
-      "added": "2026-06-06"
+      "added": "2026-06-06",
+      "statusLabel": "Read Now",
+      "href": "stories/hogwarts/index.html"
     },
     {
       "id": "mars",

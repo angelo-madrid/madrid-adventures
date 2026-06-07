@@ -1,0 +1,19 @@
+PANEL 3 of 8 — "The Young Wizards"  (Book 2: The Shadow Over the Old Castle)
+[AS-BUILT RECORD — not a regeneration prompt]
+
+P3 is FINAL via the KEPT generated image plus a single narration-box edit. Per director decision,
+the rendered wizards are kept as-is (they lean close to the famous trio look); the redesign was
+declined. Only the narration box was corrected.
+
+FINAL LETTERING ON THE PANEL:
+- NARRATION BOX (top-left):  Three young wizards appeared by candlelight. New found allies!
+- MARIA (speech bubble):  "Who are you? What is this place?"   [kept as rendered]
+- WIZARD (speech bubble):  "We're the Young Wizards."          [kept as rendered]
+
+EDIT-PASS PROMPT USED (apply to the existing P3 image; change nothing else):
+  Small edit — keep EVERYTHING else identical (characters, faces, poses, robes, both speech
+  bubbles, lighting, composition). ONLY change the top-left narration box to read exactly:
+  "Three young wizards stood by candlelight. Allies." Keep the same box style/position.
+
+AFTER THE EDIT: send the updated P3 image; it will be re-optimized to p3.webp and swapped into
+the stitch kit.

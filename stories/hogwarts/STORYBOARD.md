@@ -15,7 +15,7 @@ The internal *story* can keep them in our notes — only the painted panels must
 
 | In the poem | In the art (baked lettering + design) |
 | --- | --- |
-| "HOGWARTS" (the sign) | **the old castle** / Grimmoor / Hollowmere — **DECISION OPEN** |
+| "HOGWARTS" (the sign) | **GRIMMOOR** (resolved) — paint this on the sign; never "HOGWARTS" |
 | Harry, Ron, Hermione (named; glasses+scar) | three **generic original** young wizards, NO names, NO glasses-scar-bolt |
 | "Devil's Snare" | "the vines" / "the snare-plant" (no proper name) |
 | "Wingardium" | no spell word shown — just the troll tripping |
@@ -33,7 +33,8 @@ The internal *story* can keep them in our notes — only the painted panels must
    9 could even split into 9 (feast/farewell) + 10 (home/spark).
 2. **Outfits: Madrid trio in SIGNATURE MODERN OUTFITS, no robes** — preserves color-coded
    recognizability, contrasts them against the wizard allies, avoids the trademarked-uniform look.
-3. **In-art school name: DECISION OPEN** — needed for Panel 2's sign. Default "the old castle."
+3. **In-art school name: GRIMMOOR** (resolved) — used on Panel 2's sign and any in-art reference.
+   (Book working art-title still says "the Old Castle" — align to Grimmoor only if you want.)
 
 ## 🔄 CANON CHANGE (franchise-level) — Maria, logged this rev
 **Maria is now curious, adventurous, and proactive** — the eldest who leans in and drives the
@@ -76,8 +77,22 @@ Panel 1 → peak at Panel 6 → payoff in the coda. It's the spine of the book.
 > - **Luna** — yellow t-shirt, dark pants, brown shoes. Dark hair in a low ponytail with loose
 >   front wisps; the largest, most expressive eyes (youngest read), big smiles.
 >
-> **IP GUARDRAILS:** original kids only. Generic original young wizards (NO glasses-scar-bolt
-> iconography, no named characters). NO trademarked names, spell words, or designs baked into art.
+> **IP GUARDRAILS:** the SIBLINGS and the wizard allies are all ORIGINAL characters. The wizards
+> are archetype-homages (see cast block below) with original names/designs. Forbidden in art: the
+> full trademarked reproduction — naming them Harry/Ron/Hermione, a lightning-bolt forehead scar,
+> or trademarked house crests/scarves/uniforms/logos. (Glasses alone on Barry are fine — approved.)
+
+---
+
+## Wizard Allies (recurring cast, Panels 3–9) — ORIGINAL characters, archetype-homages
+**As-built:** the rendered wizards lean close to the famous trio look; **kept as-is per director
+decision** (project is family-facing; redesign declined). Designs of record:
+- **BARRY** *(brave leader; Harry archetype)* — tousled dark hair, **round glasses**, dark robe,
+  wand. Calm under pressure; spots Luna's gift.
+- **HARMONY** *(brilliant one; Hermione archetype)* — voluminous curls, dark robe, small
+  **spellbook**, wand. Knows the lore; decisive.
+- **BON** *(loyal, hapless friend; Ron archetype)* — red/auburn hair, freckles, lanky,
+  slightly-too-big robe, wand. Big-hearted, blunder-prone.
 
 ---
 
@@ -99,48 +114,58 @@ Panel 1 → peak at Panel 6 → payoff in the coda. It's the spine of the book.
 - **Verse beats:** they land in a clump on cold stone steps; cobwebbed halls; "Where ARE we?";
   the **sign**; blue torches; Maria's no-signal meltdown; a voice: "Phones won't help you here."
 - **Setting:** vast cold gothic entrance hall, blue-flickering torches, cobwebbed corners. A
-  weathered stone sign on the wall. **(Sign text = chosen original name + "ENTER IF YOU DARE.")**
+  weathered stone sign on the wall reads **"GRIMMOOR. ENTER IF YOU DARE."**
 - **Staging:** the three tumbled in a heap on the steps (Pepe under the pile — gag). Maria up
-  first, shaking her phone in disbelief.
-- **Story bar:** humor (the phone gag — Maria's character) + arrival dread.
-- **Lettering:** Pepe **[verse]** *"Where ARE we?!"* · Sign **[verse, name-swapped]**
-  *"___. ENTER IF YOU DARE."* · Maria **[verse]** *"No signal? NONE?!"* · off-panel voice
+  first, staring at her phone, baffled. **Phone exception:** Maria's phone was retired in v1.1;
+  this single no-signal gag is a **director-approved one-time appearance** (do NOT "fix" it by
+  removing the phone — it's intentional here).
+- **Story bar:** humor (the phone gag — now a one-off) + arrival dread.
+- **Lettering:** Narr **[verse-adapted]** *"Three siblings landed in a clump — cold stone steps,
+  creepy walls."* · Pepe **[verse]** *"Where ARE we?!"* · Sign **[verse, name-swapped]**
+  *"GRIMMOOR. ENTER IF YOU DARE."* · Maria **[verse]** *"No signal?! NONE?!"* · off-panel voice
   bubble **[verse]** *"Phones won't help you here."*
-- **IP:** do NOT paint "HOGWARTS" — use the decided name.
+- **IP:** do NOT paint "HOGWARTS" — the sign says **GRIMMOOR**. Generic gothic architecture only.
 
 ### Panel 3 — The Young Wizards
 - **Verse beats:** three young wizards by candlelight, wands held tight; they introduce
   themselves; "The castle's cursed"; every monster loose; fight to save the school before light.
 - **Setting:** candlelit stone corridor.
-- **Staging:** the trio (height band) facing three **generic original** young wizards, one wand
-  raised casting warm light. Wizard heights may vary.
+- **Staging:** the siblings (height band) facing **Barry, Harmony, and Bon** — Barry the lead,
+  wand raised casting warm gold light; Harmony with her spellbook; Bon a bit gangly behind.
+  Wizard heights may vary.
 - **Story bar:** alliance + the stakes (education: what's wrong with the castle).
-- **Lettering:** Wizard **[verse, de-named]** *"The castle's cursed — every monster's loose."* ·
-  Wizard **[verse]** *"We fight to save it before first light!"* · Maria **[added]** *"Cursed
-  how, exactly?"*
-- **IP:** generic wizards — NO names ("Harry/Ron/Hermione"), NO glasses+scar+bolt.
+- **Lettering (AS-BUILT — kept render + narrator edit):** Narr **[edit]** *"Three young wizards
+  appeared by candlelight. New found allies!"* · Maria **[as-rendered]** *"Who are you? What is
+  this place?"* · Wizard **[as-rendered]** *"We're the Young Wizards."*
+- **IP / status:** P3 image KEPT as rendered (wizards lean close to the famous trio) per director
+  decision; only the narration box was corrected (was "Six young wizards…"). Not regenerated.
 
 ### Panel 4 — The Clutching Vines  *(Devil's Snare beat)*
 - **Verse beats:** they slide into a pit; a toothed vine grabs Pepe's knee; "GET OFF OF ME!";
   "DON'T struggle — it feeds on fear! Go limp!"; they relax; *FWOOMP* the plant drops them.
 - **Setting:** dark stone pit, writhing toothed vines.
-- **Staging:** vine coiling Pepe's leg, Pepe flailing; a wizard calling the instruction; Maria &
-  Luna going deliberately limp.
-- **Story bar:** Pepe chaos + education beat (panic makes it worse).
-- **Lettering:** Pepe **[verse]** *"GET OFF OF ME!"* · Wizard **[verse]** *"Don't struggle —
-  go limp! It feeds on fear!"* · SFX **[verse]** *"FWOOMP!"*
-- **IP:** call it "the vines," not "Devil's Snare."
+- **Staging:** vine coiling Pepe's leg, Pepe flailing; **Harmony** calling the instruction (calm,
+  going limp to demonstrate); Maria & Luna going slack on her cue; Barry & Bon tangled behind,
+  Bon sheepish (he led them in). **Panel shows the struggle + instruction moment** (the *FWOOMP*
+  release is the aftermath — deferred; flag if you'd rather depict the release instead).
+- **Story bar:** Pepe chaos + Bon's blunder + education beat (panic makes it worse).
+- **Lettering:** Narr **[verse-adapted]** *"Bon's shortcut went straight down."* · Pepe **[verse]**
+  *"GET OFF OF ME!"* · Harmony **[verse]** *"Don't struggle — go LIMP! It feeds on fear!"*
+- **IP:** call it "the vines," NOT "Devil's Snare." Wizards named Bon/Harmony only (never Ron/Hermione).
 
 ### Panel 5 — The Troll
 - **Verse beats:** BOOM BOOM; a ten-foot TROLL with club and stink; "Distract it!"; Pepe (brave
   & starving) lobs his last snack as bait; troll trips on a spell and bops its OWN head; *THUD*;
   "Just napping."
 - **Setting:** crumbling stone chamber, rubble.
-- **Staging:** big dumb troll mid-stumble, club swinging into its own head; Pepe mid-throw with a
-  snack; kids ducking.
-- **Story bar:** Pepe's hunger/clumsiness becomes the save (accidental heroics).
-- **Lettering:** Wizard **[verse]** *"Distract it!"* · Pepe **[verse]** *"Have a snack!"* ·
-  SFX **[verse]** *"THUD!"* · Wizard **[verse]** *"Just napping. Now RUN!"*
+- **Staging:** big dumb troll mid-stumble, bopping its OWN head with its club; Pepe foreground
+  mid-throw lobbing his snack; Maria pulls Luna clear; **Bon** behind with a faint trip-glow at
+  the troll's feet (startled it worked); **Barry** yelling the plan. **Panel shows the slapstick
+  peak (the self-bonk)**; the troll-down + "Just napping. Now RUN!" is the aftermath — deferred
+  (flag if you'd rather depict the downed troll instead).
+- **Story bar:** Pepe's hunger-sacrifice + Bon's clumsy-spell-that-works (accidental heroics).
+- **Lettering:** Narr **[verse-adapted]** *"A troll! Ten feet of club and stink."* · Barry
+  **[verse]** *"Distract it!"* · Pepe **[verse]** *"Have a snack!"* · SFX **[verse]** *"THUD!"*
 - **IP:** no spell word ("Wingardium") shown — just the trip.
 
 ### Panel 6 — The Cold Ones & Luna's Silver Fox  *(Dementor beat — Luna's hero moment)*
@@ -149,14 +174,15 @@ Panel 1 → peak at Panel 6 → payoff in the coda. It's the spine of the book.
   **Luna**, thinking of **gelato**, conjures a **tiny silver fox from her bare hands**; "She's
   got the spark!"; Luna: "I think I'm rather prepared."
 - **Setting:** freezing corridor, frost on stone, hooded shadow-wraiths, light draining.
-- **Staging:** Luna steps to the FRONT — most expressive — a glowing **silver fox** bursting
-  from her open hands (NO wand), routing the wraiths. A wizard's silver spirit-animal can glow
-  faintly behind. Maria & Pepe lit silver.
+- **Staging:** Luna steps to the FRONT (focal, but still 93% of Maria) — a glowing **silver fox**
+  (same silver-blue as the attic book) bursting from her open hands (NO wand), routing the
+  wraiths. **Barry's** silver stag glows faintly/secondary behind him. Maria & Pepe + the wizards
+  lit silver, awed.
 - **Story bar:** the emotional core — Luna's joy IS the weapon. Silver-spark motif peaks here.
 - **Lettering:** Narr **[adapted]** *"The cold ones fed on happiness. Luna had plenty."* · Luna
-  **[verse, trimmed]** *"I think… I'm rather prepared."* · Wizard **[verse]** *"She's got the
-  spark!"*
-- **IP:** hooded shadows = generic; NO "Dementor"/"Patronus"/incantation in art. Fox is original.
+  **[verse, trimmed]** *"I think I'm rather prepared."* · Barry **[verse]** *"She's got the spark!"*
+- **IP:** hooded shadows = generic (NOT the trademarked creature); NO "Dementor"/"Patronus"/
+  incantation in art; Luna uses bare hands; fox is original. Wizards named Barry only here.
 
 ### Panel 7 — The Giant Spider & Maria's Fire  *(Maria's hero moment)*
 - **Verse beats:** webbed corridors; a SPIDER big as a bed; Pepe: "I'm done. I'm out."; "They
@@ -168,9 +194,9 @@ Panel 1 → peak at Panel 6 → payoff in the coda. It's the spine of the book.
 - **Story bar:** character payoff — proactive Maria seizing the torch fits the new profile even
   better. *(Ripple: drop the verse's "queen of being cool" framing — she's bold here, not aloof.
   "Don't make it weird" still works as sibling banter.)*
-- **Lettering:** Pepe **[verse]** *"I'm done. I'm out."* · Maria **[verse]** *"BACK OFF, you
-  ghoul!"* · Pepe **[verse]** *"…Did Maria just DO that?"* · Maria **[verse]** *"Don't make it
-  weird."*
+- **Lettering:** Narr **[verse-adapted]** *"A spider — big as Pepe's bed."* · Maria **[verse]**
+  *"BACK OFF, you ghoul!"* · Pepe **[verse]** *"Did Maria just DO that?"* · Maria **[verse]**
+  *"Don't make it weird."* (Bon shouts the fire tip in staging, not lettered.)
 
 ### Panel 8 — The Serpent & the Breaking of the Curse  *(CLIMAX)*
 - **Verse beats:** the chamber's core; a train-long serpent whose stare can kill; "DON'T LOOK —
@@ -179,12 +205,18 @@ Panel 1 → peak at Panel 6 → payoff in the coda. It's the spine of the book.
   breaks; the serpent turns to stone; the castle wakes, torches blaze, gloom rolls back.
 - **Setting:** vast echoing marble chamber, the giant serpent coiled around the curse's dark
   heart-light.
-- **Staging:** all six mid-climax, several with eyes squeezed shut; Pepe yelling with a chicken
-  leg; Luna's silver fox-light flaring; Maria mid-throw; light flooding back as the curse shatters.
+- **Staging:** all six mid-climax, most with eyes squeezed shut (fight by sound, not sight);
+  **Pepe** yelling with a chicken leg; **Luna's** silver fox-light flaring; **Maria** hurling the
+  troll's old club (callback to P5); **Harmony** casting the curse-breaking burst; **Barry**
+  lunging eyes-shut; **Bon** clattering pots. Serpent + the light-burst = focal center; light
+  floods in as the curse shatters. (Busiest panel — if it crowds, simplify to serpent + the burst
+  + the 3 siblings' actions.)
 - **Story bar:** teamwork payoff — every trait that caused trouble now wins the day.
-- **Lettering:** Wizard **[verse]** *"DON'T LOOK! Eyes shut!"* · Pepe **[verse]** *"OVER HERE,
-  you snake!"* · Narr **[adapted]** *"The castle woke — alive inside."*
-- **IP:** giant serpent kept generic; NO spell word ("Finite") shown — break the curse visually.
+- **Lettering:** Narr **[verse-adapted]** *"A serpent guarded the curse."* · Barry **[verse]**
+  *"DON'T LOOK — eyes shut!"* · Pepe **[verse]** *"OVER HERE, you snake!"* · Narr **[adapted]**
+  *"Then the curse broke — and the castle woke."*
+- **IP:** generic giant serpent; NO "Basilisk"/"Finite"/"Hogwarts"/spell words in art — break the
+  curse visually. Wizards named Barry only here.
 
 ---
 
@@ -236,8 +268,7 @@ The poem has more verses than panels, so each panel gets a stanza *block*. Ancho
 ## Open items before we go past Panel 1
 - [x] Reconcile narration/bubbles to the verse — DONE (this v2).
 - [x] Reader poem-toggle pattern + stanza→panel map — captured (build via Claude Code later).
-- [ ] **Lock in-art school name** (needed for Panel 2's sign): "the old castle" / Grimmoor /
-      Hollowmere / other.
+- [x] **In-art school name** — RESOLVED: **Grimmoor** (Panel 2 sign).
 - [ ] Lock panel count: 8 vs 9 (vs 9+10 for a roomier ending).
 - [ ] Maria: pick a replacement motif (explorer's notebook / none) + resolve the P7 & P9 verse ripples.
 - [ ] Confirm Luna's added line in Panel 1 ("Wait — it's GLOWING!") stays or goes.

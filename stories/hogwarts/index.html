@@ -1,67 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>The Shadow Over Hogwarts — The Madrid Adventures</title>
-<meta name="description" content="The Shadow Over Hogwarts — a magical castle adventure. Coming soon." />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Shadow Over the Old Castle — The Madrid Adventures</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Baloo+2:wght@600;700&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --paper: #fbf3e4; --ink: #3a2c20; --ink-soft: #6b5947;
-    --terracotta: #d2693f; --plum: #7d5a8c; --teal: #3f8c84;
+  :root{
+    --ink:#2b1d12; --cream:#fdf3df; --terra:#c8553d; --ochre:#e9c46a; --gold:#f4a259;
+    --paper:#fbe6c8;
   }
-  * { box-sizing: border-box; }
-  html, body { margin: 0; padding: 0; }
-  body {
-    font-family: 'Nunito', system-ui, sans-serif; color: var(--ink);
-    background-color: var(--paper);
-    background-image:
-      radial-gradient(circle at 18% 12%, rgba(125,90,140,0.20), transparent 45%),
-      radial-gradient(circle at 84% 88%, rgba(79,123,208,0.16), transparent 45%);
-    min-height: 100vh; display: flex; align-items: center; justify-content: center;
-    padding: 28px; line-height: 1.55;
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    font-family:'Fredoka',sans-serif; color:var(--ink);
+    background:
+      radial-gradient(circle at 50% -10%, #fbe7c0 0%, transparent 60%),
+      linear-gradient(165deg,#f7e7c4,#f1d6a3);
+    min-height:100vh; padding:0 0 80px;
   }
-  .panel {
-    max-width: 560px; text-align: center;
-    background: #fffdf8; border-radius: 22px; padding: 40px 34px 34px;
-    box-shadow: 0 14px 34px rgba(91,58,30,0.18); border: 1px solid rgba(138,92,52,0.14);
+  /* top bar */
+  .bar{
+    position:sticky; top:0; z-index:30; display:flex; align-items:center; gap:14px;
+    padding:14px clamp(16px,4vw,40px);
+    background:rgba(253,243,223,.82); backdrop-filter:blur(10px);
+    border-bottom:2px solid rgba(43,29,18,.12);
   }
-  .scene { font-size: 3.4rem; margin-bottom: 6px; }
-  .badge {
-    display: inline-flex; align-items: center; gap: 7px; font-size: 0.72rem; font-weight: 800;
-    letter-spacing: 0.6px; text-transform: uppercase; padding: 5px 12px; border-radius: 999px;
-    color: #fff; background: var(--plum); margin-bottom: 14px;
+  .back{
+    display:inline-flex; align-items:center; gap:7px; text-decoration:none;
+    font-weight:600; font-size:15px; color:var(--ink);
+    background:#fff; border:2px solid var(--ink); border-radius:30px; padding:6px 15px;
+    box-shadow:2px 2px 0 rgba(43,29,18,.2); transition:transform .12s;
   }
-  .badge::before { content:""; width:7px; height:7px; border-radius:50%; background: rgba(255,255,255,0.9); }
-  h1 {
-    font-family: 'Fredoka', cursive; font-weight: 700; color: var(--plum);
-    font-size: clamp(2rem, 6vw, 2.9rem); margin: 4px 0 4px; text-shadow: 1.5px 1.5px 0 #fff;
+  .back:hover{transform:translate(-1px,-1px);}
+  .bar .crumb{font-size:14px; opacity:.7;}
+  .bar .crumb b{color:var(--terra);}
+  .poem-toggle{
+    margin-left:auto; display:inline-flex; align-items:center; gap:7px; cursor:pointer;
+    font-family:'Fredoka',sans-serif; font-weight:600; font-size:14px; color:var(--ink);
+    background:#fff; border:2px solid var(--ink); border-radius:30px; padding:6px 15px;
+    box-shadow:2px 2px 0 rgba(43,29,18,.2); transition:transform .12s, background .15s;
   }
-  .sub { font-family:'Fredoka',cursive; color: var(--ink-soft); font-size: 1.1rem; margin: 0 0 18px; }
-  p.blurb { color: var(--ink-soft); margin: 0 auto 28px; max-width: 42ch; }
-  .back {
-    display: inline-flex; align-items: center; gap: 8px; text-decoration: none;
-    font-family: 'Fredoka', cursive; font-weight: 600; font-size: 1.02rem;
-    color: #fff; background: var(--teal); padding: 11px 22px; border-radius: 999px;
-    box-shadow: 0 6px 14px rgba(63,140,132,0.35); transition: transform 0.16s ease;
+  .poem-toggle:hover{transform:translate(-1px,-1px);}
+  .poem-toggle.on{background:var(--ochre);}
+  /* stanza caption — hidden by default, revealed in storybook mode */
+  .stanza{
+    display:none; white-space:pre-line; font-family:'Baloo 2',cursive; font-weight:600;
+    font-size:clamp(15px,2.6vw,18px); line-height:1.5; color:var(--ink);
+    background:#fff7e6; border:2.5px solid var(--ink); border-radius:12px;
+    padding:16px 20px; margin:0 2px 16px; box-shadow:3px 3px 0 rgba(43,29,18,.15);
+    position:relative;
   }
-  .back:hover { transform: translateY(-3px); }
+  .stanza::before{
+    content:"✦"; position:absolute; top:-13px; left:18px; background:var(--terra);
+    color:#fff; width:26px; height:26px; border-radius:50%; display:grid; place-items:center;
+    font-size:13px; border:2px solid var(--ink);
+  }
+  body.storybook .stanza{display:block; animation:fade .4s ease;}
+  @keyframes fade{from{opacity:0; transform:translateY(-6px);} to{opacity:1;}}
+
+  /* hero */
+  header.hero{text-align:center; padding:48px 20px 26px;}
+  header.hero .kicker{
+    font-size:14px; letter-spacing:3px; text-transform:uppercase; color:var(--terra);
+    font-weight:700; margin-bottom:8px;
+  }
+  header.hero h1{
+    font-family:'Baloo 2',cursive; font-size:clamp(34px,7.5vw,72px); line-height:.98;
+    color:var(--terra); text-shadow:3px 3px 0 var(--ochre), 6px 6px 0 rgba(43,29,18,.25);
+    transform:rotate(-1.5deg);
+  }
+  header.hero p{margin-top:16px; font-size:clamp(15px,2.6vw,19px); opacity:.8;}
+  .divider{width:90px; height:7px; margin:22px auto 0; border-radius:6px;
+    background:repeating-linear-gradient(90deg,var(--terra) 0 12px,var(--gold) 12px 24px);}
+
+  /* panels */
+  .reel{max-width:920px; margin:10px auto 0; padding:0 clamp(14px,4vw,28px);
+        display:flex; flex-direction:column; gap:clamp(26px,5vw,48px);}
+  .panel{
+    position:relative; background:#fff; border:3px solid var(--ink); border-radius:14px;
+    overflow:hidden; box-shadow:0 14px 0 -6px rgba(43,29,18,.18), 8px 8px 0 rgba(43,29,18,.1);
+    opacity:0; transform:translateY(26px); animation:rise .6s ease forwards;
+  }
+  @keyframes rise{to{opacity:1; transform:none;}}
+  .panel img{display:block; width:100%; height:auto;}
+  .panel .num{
+    position:absolute; bottom:12px; right:12px; z-index:3;
+    font-family:'Baloo 2',cursive; font-weight:700; font-size:15px;
+    background:var(--ink); color:var(--cream); width:34px; height:34px; border-radius:50%;
+    display:grid; place-items:center; box-shadow:2px 2px 0 rgba(43,29,18,.3);
+  }
+  /* the end */
+  .end{text-align:center; margin:54px auto 0; max-width:680px; padding:0 20px;}
+  .end .stamp{
+    display:inline-block; font-family:'Baloo 2',cursive; font-weight:700;
+    font-size:clamp(26px,6vw,44px); color:#fff; background:var(--terra);
+    padding:10px 34px; border-radius:40px; transform:rotate(-2deg);
+    box-shadow:4px 4px 0 rgba(43,29,18,.3); border:3px solid var(--ink);
+  }
+  .end p{margin-top:20px; font-size:16px; opacity:.78;}
+  .end .next{
+    margin-top:26px; display:inline-flex; gap:10px; flex-wrap:wrap; justify-content:center;
+  }
+  .end .chip{font-size:13px; background:#fff; border:2px dashed var(--ink); border-radius:30px;
+    padding:7px 15px; opacity:.85;}
+  footer{text-align:center; margin-top:50px; font-size:14px; opacity:.7;}
+  footer b{color:var(--terra);}
 </style>
 </head>
 <body>
-  <main class="panel">
-    <div class="scene">🏰✨</div>
-    <span class="badge">Coming soon</span>
-    <h1>The Shadow Over Hogwarts</h1>
-    <p class="sub">A magical castle adventure</p>
-    <p class="blurb">A cursed castle, a monster gauntlet, and Luna's very own Patronus.
-      This book hasn't been written yet — but it's on its way.</p>
-    <div>
-      <a class="back" href="../../">← Back to the shelf</a>
+  <nav class="bar">
+    <a class="back" href="../../index.html">← Bookshelf</a>
+    <span class="crumb">The Madrid Adventures · <b>The Shadow Over the Old Castle</b></span>
+    <button class="poem-toggle" id="poemBtn" onclick="togglePoem()">📖 Show the poem</button>
+  </nav>
+
+  <header class="hero">
+    <div class="kicker">A Madrid Adventure · Book 2</div>
+    <h1>The Shadow Over the Old Castle</h1>
+    <p>Maria, Pepe &amp; Luna fall into the cursed castle of Grimmoor — one monster at a time.</p>
+    <div class="divider"></div>
+  </header>
+
+  <main class="reel" id="reel"><!-- panels injected --></main>
+
+  <section class="end">
+    <span class="stamp">The End</span>
+    <p>Curse broken, castle bright — three siblings, and one little spark they kept.</p>
+    <div class="next">
+      <span class="chip">Up next: Mars</span>
+      <span class="chip">Book 1: Roman Holiday</span>
     </div>
-  </main>
+  </section>
+
+  <footer>Maria · Pepe · Luna — <b>three siblings, many worlds.</b></footer>
+
+<script>
+// Single source of truth: panel art + its poem stanza both come from pages.json.
+// FALLBACK is used only if pages.json can't be fetched (e.g. opened via file://).
+const FALLBACK = [
+  {art:"panels/p1.webp"},{art:"panels/p2.webp"},{art:"panels/p3.webp"},{art:"panels/p4.webp"},
+  {art:"panels/p5.webp"},{art:"panels/p6.webp"},{art:"panels/p7.webp"},{art:"panels/p8.webp"}
+];
+function render(list){
+  const reel=document.getElementById('reel');
+  list.forEach((pg,i)=>{
+    if(pg.stanza){
+      const s=document.createElement('div');
+      s.className='stanza'; s.textContent=pg.stanza;
+      reel.appendChild(s);
+    }
+    const fig=document.createElement('figure');
+    fig.className='panel';
+    fig.style.animationDelay=(i*0.06)+'s';
+    fig.innerHTML='<span class="num">'+(i+1)+'</span>'+
+      '<img loading="lazy" src="'+pg.art+'" alt="The Shadow Over the Old Castle — panel '+(i+1)+'">';
+    reel.appendChild(fig);
+  });
+}
+function togglePoem(){
+  const on=document.body.classList.toggle('storybook');
+  const btn=document.getElementById('poemBtn');
+  btn.classList.toggle('on',on);
+  btn.textContent = on ? '📖 Hide the poem' : '📖 Show the poem';
+}
+fetch('pages.json')
+  .then(r=>r.ok?r.json():Promise.reject())
+  .then(d=>{
+    const pages=(d.pages||[]).filter(p=>p.art);
+    render(pages.length?pages:FALLBACK);
+  })
+  .catch(()=>render(FALLBACK));
+</script>
 </body>
 </html>

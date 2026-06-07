@@ -107,7 +107,9 @@ madrid-adventures/
 ├── dashboard/{SPEC,FILES,BACKLOG}.md + assets/ (header avatars)
 ├── docs/CHATGPT_CONTEXT.md  # the pasteable ChatGPT session brief
 └── stories/
-    ├── rome/   index.html + pages.json + panels/p1..p8 (COMPLETE)
+    ├── rome/   index.html (reads panels+stanzas from pages.json; has poem toggle)
+    │            + pages.json (panels + per-panel "stanza" = full poem) + poem.md (ref copy)
+    │            + panels/p1..p8 (COMPLETE)
     ├── hogwarts/  (NEXT — coming-soon stub exists)
     └── mars/      (coming-soon stub)
 ```
@@ -118,14 +120,24 @@ Storage: images live in-repo for now (small); Supabase migration for bulk art is
 
 ## Where we are right now
 
-- Rome: done & published (8 panels + poem). Faces use the OLD refs — **left as-is on purpose**
-  (charming first book; not re-rendering). The reader page now has a **"Show the poem" toggle**
-  (storybook mode: a `storybook` class on `<body>` + 8 stanzas mapped to the 8 panels). **REUSE
-  this pattern on the Hogwarts reader.**
-- v3 standardized face refs created & locked (blue shirt / white bg / front pose).
-- **Hogwarts is in progress:** storyboard v2 drafted (reconciled to the poem), Panel 1 prompt
-  written + generated + QA'd, **Maria recast (v1.1)**. Poem: `Three_Siblings_and_the_Shadow_Over_Hogwarts.md`.
-- Note: poem stanzas and panels' baked bubbles don't match word-for-word — intentional (picture-book).
+- **Rome: done & published**, including a **"Show the poem" toggle** (storybook mode) on the
+  reader page. Faces in the Rome panels use the OLDER refs — **left as-is on purpose** (a
+  face-swap was attempted and abandoned; the seam is an acceptable "charming first book").
+- **v3 standardized face refs are FINAL & locked**: `characters/refs/{maria,pepe,luna}_ref.png`
+  — same blue shirt, white background, straight front pose. Target = recognizable & consistent,
+  NOT photographic. (We tried photographic likeness hard, including a P1 face-swap; it makes
+  every panel a grind, so we deliberately stopped. Use the refs as MODEL SHEETS.)
+- The Rome **poem is now single-source in `stories/rome/pages.json`**: each panel has a
+  `stanza` field holding that section's full verse, and `index.html` reads stanzas FROM
+  pages.json (no hardcoded copy). To revise the poem, edit the `stanza` fields in pages.json —
+  one place, page updates automatically. (`stories/rome/poem.md` is a reference copy of the
+  full poem.)
+- **Poem-toggle pattern is REUSABLE** — the Hogwarts reader page should inherit the same
+  "Show the poem" button + stanza-per-panel structure (stanzas in its own pages.json).
+- Note: poem stanzas and panels' baked-in speech bubbles don't word-for-word match (narrator
+  verse vs. live dialogue) — intentional, picture-book style.
+- **Hogwarts — in progress:** storyboard v2 (reconciled to the poem) + Panel 1 prompt written,
+  generated & QA'd; **Maria recast (v1.1)**. Poem: `Three_Siblings_and_the_Shadow_Over_Hogwarts.md`.
 
 ## Hogwarts — known constraints
 

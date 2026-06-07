@@ -1,0 +1,62 @@
+PANEL 4 of 8 — "The Clutching Vines"  (Book 2: The Shadow Over the Old Castle)
+[Attach the 3 reference faces as character MODEL SHEETS: maria_ref / pepe_ref / luna_ref]
+
+STYLE: soft hand-painted anime / gentle watercolor, warm lighting, delicate linework.
+A single landscape illustration with comic speech bubbles and a narration box PAINTED INTO
+the image, lettered to match the art.
+
+CHARACTERS = the 3 attached references are the official, canonical MODEL SHEETS for the SIBLINGS.
+Faces and hair come from these. Goal: clearly RECOGNIZABLE & consistent, stylized — NOT
+photographic. (The refs show blue shirts on white; ignore that wardrobe — use the outfits below.)
+
+RENDER-AGE DIAL: draw the three siblings as "about 13, 12, and 12." This is ONLY a size dial to
+keep them close in height — do NOT draw the youngest as a small child.
+
+HEIGHT BAND (siblings — fixed proportions, Maria is the reference; the #1 thing to get right):
+  - Maria = 100% (tallest)
+  - Pepe  = 97% of Maria's height
+  - Luna  = 93% of Maria's height
+Three similarly-tall siblings in a NARROW band — never one big kid plus two little ones. Hold
+these percentages even in this busy tangle (do NOT let Luna drop below 93% — under-sizing Luna
+is the most common drift). The wizards are separate characters and may differ in height.
+
+THE SIBLINGS (modern outfits, SAME as prior panels):
+- MARIA (eldest girl): teal t-shirt, dark-blue jeans, teal sneakers. Long dark hair, center
+  part with a soft curtain fringe. Curious, adventurous, proactive.
+- PEPE (middle boy): orange t-shirt with a cream horizontal stripe, green cargo shorts, blue
+  sneakers. Short tousled/spiky dark hair. Animated — currently panicking.
+- LUNA (youngest girl): yellow t-shirt, dark pants, brown shoes. Dark hair in a low ponytail
+  with loose front wisps; the largest, most expressive eyes.
+
+THE WIZARD ALLIES (ORIGINAL characters, in dark robes; keep consistent with prior panel):
+- HARMONY (the clever one): voluminous dark-chestnut curls (distinct from Maria's straight hair),
+  clever eyes; dark robe; her small spellbook in one hand. Calm and commanding here — she knows
+  what the plant is.
+- BARRY (leader): tousled dark hair, ROUND GLASSES, dark robe, wand. (No scar.)
+- BON (goofy friend): red/auburn hair, freckles, lanky, slightly-too-big robe — looking sheepish
+  (he's the one who led everyone down here).
+
+SETTING: a dark, dank stone PIT beneath the castle — they've fallen in. Writhing, sickly-green
+VINES with small fang-like THORNS/teeth snake up from the floor and walls, coiling around the
+group. Cold blue-grey ambient light from above; damp stone. Mood: scary but not gory — adventure-
+peril for kids.
+
+STAGING / ACTION (the struggle + the clever instruction):
+- A thick toothed vine has coiled around PEPE's leg/knee and is hauling him, half-lifted, as he
+  flails and yells.
+- HARMONY stands firm nearby, one hand up, deliberately going LIMP to demonstrate, calling the
+  instruction calmly.
+- MARIA and LUNA are also caught by vines but going slack on Harmony's cue (Maria steadying Luna).
+- BARRY and BON are tangled in the vines too, in the background of the pit.
+- Focus/readability: keep PEPE (being grabbed) and HARMONY (instructing) the clear focal pair.
+
+LETTERING (paint in; keep SHORT and correctly spelled — double-check every word):
+- NARRATION BOX (top): Bon's shortcut went straight down.
+- PEPE (speech bubble, panicked):  "GET OFF OF ME!"
+- HARMONY (speech bubble, calm and clear):  "Don't struggle — go LIMP! It feeds on fear!"
+
+DO NOT: name the plant — do NOT write "Devil's Snare" or any proper plant name anywhere (it is
+just "the vines"); do NOT name the wizards Harry/Ron/Hermione (only Bon appears in the narration);
+no lightning-scar on Barry; NO trademarked house crests/scarves/uniforms/logos — plain dark robes.
+Reuse no prior panel's narration (use only the narration box above). Add no text not listed above.
+Do not draw the younger two siblings as small children. Keep it scary-but-kid-friendly: no gore.

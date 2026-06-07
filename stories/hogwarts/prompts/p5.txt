@@ -1,0 +1,64 @@
+PANEL 5 of 8 — "The Troll"  (Book 2: The Shadow Over the Old Castle)
+[Attach the 3 reference faces as character MODEL SHEETS: maria_ref / pepe_ref / luna_ref]
+
+STYLE: soft hand-painted anime / gentle watercolor, warm lighting, delicate linework.
+A single landscape illustration with comic speech bubbles and a narration box PAINTED INTO
+the image, lettered to match the art.
+
+CHARACTERS = the 3 attached references are the official, canonical MODEL SHEETS for the SIBLINGS.
+Faces and hair come from these. Goal: clearly RECOGNIZABLE & consistent, stylized — NOT
+photographic. (The refs show blue shirts on white; ignore that wardrobe — use the outfits below.)
+
+RENDER-AGE DIAL: draw the three siblings as "about 13, 12, and 12." This is ONLY a size dial to
+keep them close in height — do NOT draw the youngest as a small child.
+
+HEIGHT BAND (siblings — fixed proportions, Maria is the reference; the #1 thing to get right):
+  - Maria = 100% (tallest)
+  - Pepe  = 97% of Maria's height
+  - Luna  = 93% of Maria's height
+Three similarly-tall siblings in a NARROW band — never one big kid plus two little ones. Hold
+these percentages even in this action shot (do NOT let Luna drop below 93% — under-sizing Luna
+is the most common drift). The troll and the wizards are separate and have their own scale.
+
+THE SIBLINGS (modern outfits, SAME as prior panels):
+- MARIA (eldest girl): teal t-shirt, dark-blue jeans, teal sneakers. Long dark hair, center
+  part with a soft curtain fringe. Curious, adventurous, proactive — pulling Luna clear.
+- PEPE (middle boy): orange t-shirt with a cream horizontal stripe, green cargo shorts, blue
+  sneakers. Short tousled/spiky dark hair. Brave but reluctant — sacrificing his snack.
+- LUNA (youngest girl): yellow t-shirt, dark pants, brown shoes. Dark hair in a low ponytail
+  with loose front wisps; the largest, most expressive eyes — wide with alarm.
+
+THE WIZARD ALLIES (ORIGINAL characters, dark robes; keep consistent with prior panels):
+- BARRY (leader): tousled dark hair, ROUND GLASSES (no scar), dark robe, wand — shouting the plan.
+- BON (goofy friend): red/auburn hair, freckles, lanky, slightly-too-big robe; wand out, a faint
+  magical glow at the troll's feet — startled that his clumsy spell actually worked.
+- HARMONY (clever one): dark-chestnut curls, spellbook, dark robe — at the edge of frame.
+
+THE TROLL (generic fantasy monster, comedic not gory): a huge, lumpy, dim-witted troll about
+ten feet tall, grey-green skin, holding a big wooden club, smelly (little stink lines). It has
+just TRIPPED — stumbling forward, cross-eyed and dazed, its own club swinging DOWN onto its own
+head. Slapstick, not violent — no blood.
+
+SETTING: a crumbling stone chamber / broad corridor of the cursed castle, rubble and a smashed
+doorway the troll came through. Cold blue-grey ambient light. Mood: comic peril.
+
+STAGING / ACTION (the slapstick peak):
+- The TROLL is the big central figure, mid-stumble, bopping its OWN head with its club (impact
+  burst at its head). It's toppling.
+- PEPE in the foreground, mid-throw, having just lobbed a small snack — the snack arcing through
+  the air toward the troll.
+- MARIA pulls LUNA clear of the falling troll; both ducking aside.
+- BON behind, wand out with the faint trip-glow at the troll's feet, jaw-dropped; BARRY nearby
+  yelling. Keep the TROLL + PEPE the clear focal pair.
+
+LETTERING (paint in; keep SHORT and correctly spelled — double-check every word):
+- NARRATION BOX (top): A troll! Ten feet of club and stink.
+- BARRY (speech bubble):  "Distract it!"
+- PEPE (speech bubble, lobbing his snack):  "Have a snack!"
+- SFX (at the club-on-head impact):  "THUD!"
+
+DO NOT: show or write any spell word ("Wingardium" or any incantation) — Bon's spell is only a
+faint glow effect; do NOT name the wizards Harry/Ron/Hermione (only Barry appears in dialogue);
+no lightning-scar on Barry; NO trademarked house crests/scarves/uniforms/logos — plain dark robes.
+Reuse no prior panel's narration (use only the narration box above). Add no text not listed above.
+Do not draw the younger two siblings as small children. Keep it slapstick and kid-friendly: no gore.
