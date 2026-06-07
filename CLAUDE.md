@@ -115,6 +115,10 @@ Each panel is generated independently, so consistency is engineered into every p
 Use the three attached character references as the on-model designs for the SAME three
 siblings — match their FACES and their outfits exactly as described.
 
+CHARACTER REFS (attach each child's standardized reference for face/hair CONSISTENCY —
+goal is recognizable & consistent across panels, NOT photographic likeness; keep their
+hair, age order, and outfits locked):
+
 AGES & HEIGHTS (render-age trick — say 13/12/12 to stop Luna shrinking; canon age stays 9):
 The three children are CLOSE in age, about 13, 12, and 12, and NEARLY THE SAME HEIGHT.
 - MARIA — tallest; the 100% height reference.

@@ -64,3 +64,48 @@ Add a dated entry whenever something works (or fails) worth remembering.
 
 *Add new entries below as the system evolves (new prompt techniques, bubble placement,
 publishing improvements, cross-book continuity discoveries).*
+
+## Face likeness — the Identity Lock protocol (added after the v1 face refresh)
+
+The original refs went through a "ghiblify" pass that prioritized style over resemblance, so
+faces drifted toward a generic cute-anime average (Maria too young, Luna's round face slimmed).
+Fix discovered:
+
+- **Resemblance must explicitly outrank style.** The single highest-value instruction is:
+  *"This is a portrait of a REAL specific child — treat the photo as a likeness target, not
+  inspiration. If you find yourself making the face rounder/softer/cuter than the photo, STOP
+  and match the photo."*
+- **Generate faces SOLO, not as a combined sheet.** A 3-up sheet splits resolution and lets
+  the three faces cross-contaminate into a family-average look. One face per generation = full
+  detail + no blending.
+- **Name each child's specific must-keep features** (Maria: leaner/older 13yo face, almond eyes
+  at true size; Pepe: soft tousled hair, calmer eyes; Luna: ROUND full face + soft cheeks).
+  List forbidden drift explicitly (don't enlarge eyes, don't slim the face, etc.).
+- **"Identity Lock Reference" framing** beats "style reference" — signals to the model that the
+  face is a canonical template, not a look to riff on.
+- **Priority order** for any Maria/Pepe/Luna image: (1) the locked master face reference,
+  (2) pose/expression, (3) outfit, (4) environment, (5) watercolor style. Identity never yields
+  to style.
+- Practical use: the **locked face image attached to the prompt does most of the work**; keep a
+  SHORT identity-lock reminder in the prompt header; the full protocol lives here as the QA bar.
+- Likeness has a ceiling — it won't be photographic, but "clearly them, lightly stylized" is the
+  target. A close-but-off face can be nudged with a follow-up edit ("longer/more mature face",
+  "rounder face, fuller cheeks").
+
+**Status:** Maria refreshed & locked (maria_ref.png v2). Pepe + Luna pending same treatment.
+Rome panels 1–8 keep the older faces — acceptable seam; likeness sharpens from here forward.
+
+## Likeness target — RESOLVED to "recognizable, not photographic" (franchise decision)
+
+Tried hard for photographic likeness (v2 refs + Identity Lock protocol + a P1 face-swap edit).
+Conclusion: chasing exact real-face likeness fights the model on every panel and makes each one
+a multi-round grind — unsustainable across 8 panels × multiple books. **Decision:** the target
+is a consistent, appealing stylized (Ghibli/watercolor) look that's **clearly recognizable as
+each kid**, anchored by hair + age order + outfits + personality — NOT facial accuracy. Kids
+recognize themselves from the whole package, and can focus on the story.
+- The heavy "resemblance outranks style / match exact facial structure" Identity Lock protocol
+  is **demoted** — kept only as the gentler "attach refs for consistency & recognizability."
+- Canonical refs are now **v3**: standardized set (same blue shirt, white background, straight
+  front pose) so the face is the only variable across the three.
+- **Rome's 8 panels stay as published** (old faces) — not re-rendered. The new look starts from
+  the next thing generated (cover / Hogwarts).

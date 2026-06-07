@@ -8,6 +8,8 @@ raw/
 *.psd
 *.xcf
 *-original.*
+*_source.*
+characters/sources/
 # os
 .DS_Store
 Thumbs.db

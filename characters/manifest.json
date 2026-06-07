@@ -57,7 +57,7 @@
     "maria": {
       "displayName": "Maria",
       "age": 13,
-      "referenceImage": "refs/maria_ref.png",
+      "referenceImage": "characters/refs/maria_ref.png",
       "sourcePrompt": "refs/prompts/maria.txt",
       "bible": "Eldest sibling, ~13, the tallest. Long black hair with a fringe; warm friendly face. Default look: teal t-shirt, dark-blue jeans, teal sneakers. Soft hand-painted anime / watercolor style.",
       "locked": true,
@@ -65,12 +65,13 @@
       "defaultOutfit": "teal t-shirt, dark-blue jeans, teal sneakers",
       "hair": "long black hair with a fringe",
       "personality": "Responsible, observant; often documenting the trip. Pretends to be unimpressed but secretly loves the adventure.",
-      "motif": "phone / camera (recurring, optional)"
+      "motif": "phone / camera (recurring, optional)",
+      "referenceVersion": "v3 — standardized stylized set (blue shirt, white bg, straight pose); recognizable not photographic"
     },
     "pepe": {
       "displayName": "Pepe (Felipe)",
       "age": 12,
-      "referenceImage": "refs/pepe_ref.png",
+      "referenceImage": "characters/refs/pepe_ref.png",
       "sourcePrompt": "refs/prompts/pepe.txt",
       "bible": "Middle child, ~12, just a little shorter than Maria. Short tousled dark hair; cheerful, often mid-mischief. Default look: orange t-shirt with a cream/white horizontal stripe, green cargo shorts, blue sneakers. Soft hand-painted anime / watercolor style.",
       "locked": true,
@@ -78,12 +79,13 @@
       "defaultOutfit": "orange t-shirt with a cream/white horizontal stripe, green cargo shorts, blue sneakers",
       "hair": "short tousled dark hair",
       "personality": "Curious, mischievous, accident-prone — creates many of the comic situations. Enthusiastic explorer.",
-      "motif": "travel guidebook (recurring, optional)"
+      "motif": "travel guidebook (recurring, optional)",
+      "referenceVersion": "v3 — standardized stylized set (blue shirt, white bg, straight pose); recognizable not photographic"
     },
     "luna": {
       "displayName": "Luna",
       "age": 9,
-      "referenceImage": "refs/luna_ref.png",
+      "referenceImage": "characters/refs/luna_ref.png",
       "sourcePrompt": "refs/prompts/luna.txt",
       "bible": "Youngest, ~9, a little shorter than Pepe (NOT tiny — close in age). Dark hair in a ponytail; sweet, curious. Default look: yellow t-shirt, dark pants, brown shoes. Soft hand-painted anime / watercolor style. (Updated from the earlier blue-star-dress concept to match her established comic look.)",
       "locked": true,
@@ -91,7 +93,8 @@
       "defaultOutfit": "yellow t-shirt, dark pants, brown shoes",
       "hair": "dark hair in a ponytail",
       "personality": "Openly excited and curious; frequently asks questions; most expressive of the three; embraces discovery.",
-      "motif": "small backpack / travel accessory (recurring, optional)"
+      "motif": "small backpack / travel accessory (recurring, optional)",
+      "referenceVersion": "v3 — standardized stylized set (blue shirt, white bg, straight pose); recognizable not photographic"
     }
   },
   "assets": [
@@ -424,5 +427,6 @@
     }
   ],
   "_consistency_rule": "HARD ANCHORS: faces + height/age order (Maria ~13 tallest > Pepe ~12 > Luna ~9, small gaps, Luna not tiny). Outfits are ALWAYS stated explicitly in each panel prompt and default to the looks above; the model never improvises wardrobe. See CLAUDE.md for the reusable prompt header.",
-  "_personality_note": "Personalities are story canon and stay consistent across ALL books. Recurring motifs are gentle, optional anchors — NOT required in every panel."
+  "_personality_note": "Personalities are story canon and stay consistent across ALL books. Recurring motifs are gentle, optional anchors — NOT required in every panel.",
+  "_identity_lock": "Each character has a standardized reference (characters/refs/<name>_ref.png): same blue shirt, white bg, front pose. GOAL = consistent + clearly recognizable as that character, NOT photographic likeness. Attach refs to every prompt for face/hair consistency; lock hair, age order, outfits, personality. Chasing exact real-face likeness is explicitly NOT the target (it makes every panel a fight)."
 }
