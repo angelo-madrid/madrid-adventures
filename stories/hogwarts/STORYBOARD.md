@@ -72,8 +72,7 @@ Panel 1 → peak at Panel 6 → payoff in the coda. It's the spine of the book.
 >   a soft curtain fringe framing the face; **curious, adventurous, proactive** — the eldest who
 >   leans in and leads the way (NOT aloof, never "unimpressed"). No phone motif.
 > - **Pepe** — orange t-shirt with a cream horizontal stripe, green cargo shorts, blue
->   sneakers. Short tousled/spiky dark hair; small mole just below the right of his mouth;
->   animated, mischief-prone expressions.
+>   sneakers. Short tousled/spiky dark hair; animated, mischief-prone expressions.
 > - **Luna** — yellow t-shirt, dark pants, brown shoes. Dark hair in a low ponytail with loose
 >   front wisps; the largest, most expressive eyes (youngest read), big smiles.
 >
@@ -209,14 +208,17 @@ Panel 1 → peak at Panel 6 → payoff in the coda. It's the spine of the book.
 ---
 
 ## Reader page — "Show the poem" toggle (REUSE Rome's pattern; Claude Code build, later)
-The Hogwarts reader (`stories/hogwarts/index.html`) must reuse Rome's storybook toggle:
-a "Show the poem" button in the top bar that adds a `storybook` class to `<body>`, revealing a
-poem-stanza card above each panel (default view stays the clean comic). Pure HTML/CSS/JS, no
-image changes. One hardcoded stanza block per panel — the map below feeds that.
+The Hogwarts reader (`stories/hogwarts/index.html`) reuses Rome's storybook toggle: a "Show the
+poem" button in the top bar that flips the page into storybook mode, revealing a poem-stanza card
+above each panel (default view stays the clean comic). Pure HTML/CSS/JS, no image changes.
+**Architecture (as built in Rome — match it):** stanzas are NOT hardcoded in JS. Each panel entry
+in `stories/hogwarts/pages.json` carries a `stanza` field holding that panel's verse, and
+`index.html` reads the stanzas FROM pages.json (single source). Keep `stories/hogwarts/poem.md`
+as a reference copy of the full poem. To revise the poem later, edit the `stanza` fields — one place.
 **Principle (locked):** poem stanzas (narrator's verse) and baked bubbles (characters' live
 dialogue) do NOT match word-for-word — that's the picture-book convention, intentional.
 
-## Poem stanza → panel map (for the toggle; pull exact text from the poem file at build)
+## Poem stanza → panel map (populate each panel's `stanza` field in pages.json)
 The poem has more verses than panels, so each panel gets a stanza *block*. Anchors by first line:
 - **P1** — "The thunder cracked…" → through "…freed from its cage," (book wakes, page touched).
 - **P2** — "they tumbled, spun…" → through "…'Phones won't help you here.'" (land, sign, no signal).
@@ -228,8 +230,8 @@ The poem has more verses than panels, so each panel gets a stanza *block*. Ancho
 - **P8** — "At last they reached…" → through "…Hogwarts WOKE: alive inside!" (basilisk; curse broken).
 - **P9** (if used) — "The ghosts all cheered…" → through "…the bravest team that Hogwarts won."
 - *If 8 panels:* fold the P9 block onto P8, or split P8's climax verse from the resolution verse.
-- *At build:* the hardcoded stanzas may use "the old castle" in place of "HOGWARTS" to stay
-  consistent with the art's name swap (your call — verse record vs. reader display).
+- *Name in displayed stanza:* the verse says "HOGWARTS"; decide whether the reader stanza keeps it
+  (it's the narrator's poem text) or swaps to the art's name. The ART still never shows it. Your call.
 
 ## Open items before we go past Panel 1
 - [x] Reconcile narration/bubbles to the verse — DONE (this v2).
