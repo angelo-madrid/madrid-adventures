@@ -84,12 +84,46 @@
     padding:7px 15px; opacity:.85;}
   footer{text-align:center; margin-top:50px; font-size:14px; opacity:.7;}
   footer b{color:var(--terra);}
+
+  /* poem toggle button */
+  .poem-toggle{
+    margin-left:auto; cursor:pointer;
+    display:inline-flex; align-items:center; gap:7px;
+    font-family:'Fredoka',sans-serif; font-weight:600; font-size:15px; color:var(--ink);
+    background:var(--ochre); border:2px solid var(--ink); border-radius:30px; padding:6px 15px;
+    box-shadow:2px 2px 0 rgba(43,29,18,.2); transition:transform .12s, background .2s, color .2s;
+  }
+  .poem-toggle:hover{transform:translate(-1px,-1px);}
+  .poem-toggle[aria-pressed="true"]{background:var(--terra); color:#fff;}
+  @media (max-width:520px){ .bar .crumb{display:none;} .poem-toggle{font-size:14px; padding:6px 12px;} }
+
+  /* storybook mode — poem stanzas above each panel */
+  .block{display:flex; flex-direction:column;}
+  .poem-title{
+    display:none; text-align:center; margin:0 auto 4px;
+    font-family:'Baloo 2',cursive; font-weight:700; color:var(--terra);
+    font-size:clamp(22px,4vw,32px); transform:rotate(-1deg);
+  }
+  .poem-title small{display:block; font-family:'Fredoka',sans-serif; font-weight:500;
+    font-size:14px; letter-spacing:2px; text-transform:uppercase; color:var(--ink); opacity:.6;}
+  .stanza{
+    display:none; white-space:pre-line; text-align:center;
+    font-family:'Fredoka',sans-serif; font-weight:500;
+    font-size:clamp(16px,2.5vw,20px); line-height:1.55; color:var(--ink);
+    background:rgba(255,255,255,.6); border:2px dashed rgba(43,29,18,.28);
+    border-radius:14px; padding:18px 22px 20px; margin-bottom:16px;
+  }
+  body.storybook .poem-title{display:block;}
+  body.storybook .stanza{display:block; animation:fadeStanza .4s ease both;}
+  @keyframes fadeStanza{from{opacity:0; transform:translateY(-8px);} to{opacity:1; transform:none;}}
+  @media print{ .poem-toggle{display:none;} .stanza, .poem-title{display:block !important;} }
 </style>
 </head>
 <body>
   <nav class="bar">
     <a class="back" href="../../index.html">← Bookshelf</a>
     <span class="crumb">The Madrid Adventures · <b>Roman Holiday</b></span>
+    <button class="poem-toggle" id="poemToggle" type="button" aria-pressed="false" hidden>📖 Show the poem</button>
   </nav>
 
   <header class="hero">
@@ -120,24 +154,68 @@ const FALLBACK = [
   "panels/p4-spanish-steps.webp","panels/p5-pantheon.webp","panels/p6-mouth-of-truth.webp",
   "panels/p7-vatican.webp","panels/p8-bedtime.webp"
 ];
-function render(list){
+
+// Render each panel; if it has a paired poem stanza, render that above it (hidden
+// until storybook mode is toggled on).
+function render(items, poemTitle){
   const reel=document.getElementById('reel');
-  list.forEach((src,i)=>{
+  reel.innerHTML='';
+
+  if(poemTitle){
+    const t=document.createElement('div');
+    t.className='poem-title';
+    t.innerHTML='<small>The poem</small>'+poemTitle;
+    reel.appendChild(t);
+  }
+
+  items.forEach((it,i)=>{
+    const block=document.createElement('section');
+    block.className='block';
+
+    if(it.stanza){
+      const st=document.createElement('div');
+      st.className='stanza';
+      st.textContent=it.stanza;            // CSS white-space:pre-line keeps the line breaks
+      block.appendChild(st);
+    }
+
     const fig=document.createElement('figure');
     fig.className='panel';
     fig.style.animationDelay=(i*0.06)+'s';
     fig.innerHTML='<span class="num">'+(i+1)+'</span>'+
-      '<img loading="lazy" src="'+src+'" alt="Roman Holiday — panel '+(i+1)+'">';
-    reel.appendChild(fig);
+      '<img loading="lazy" src="'+it.src+'" alt="Roman Holiday — panel '+(i+1)+'">';
+    block.appendChild(fig);
+
+    reel.appendChild(block);
   });
 }
+
+// Storybook-mode toggle: reveal/hide the poem stanzas.
+function wireToggle(hasPoem){
+  const btn=document.getElementById('poemToggle');
+  if(!hasPoem) return;                      // no stanzas → leave the button hidden
+  btn.hidden=false;
+  let on=false;
+  btn.addEventListener('click',()=>{
+    on=!on;
+    document.body.classList.toggle('storybook', on);
+    btn.setAttribute('aria-pressed', on?'true':'false');
+    btn.textContent = on ? '📖 Hide the poem' : '📖 Show the poem';
+  });
+}
+
 fetch('pages.json')
   .then(r=>r.ok?r.json():Promise.reject())
   .then(d=>{
-    const imgs=(d.pages||[]).filter(p=>p.art).map(p=>p.art);
-    render(imgs.length?imgs:FALLBACK);
+    const pages=(d.pages||[]).filter(p=>p.art);
+    const items = pages.length
+      ? pages.map(p=>({src:p.art, stanza:(p.stanza||'').trim()}))
+      : FALLBACK.map(src=>({src, stanza:''}));
+    const hasPoem = items.some(it=>it.stanza);
+    render(items, hasPoem ? (d.poemTitle||'') : '');
+    wireToggle(hasPoem);
   })
-  .catch(()=>render(FALLBACK));
+  .catch(()=>render(FALLBACK.map(src=>({src, stanza:''})), ''));
 </script>
 </body>
 </html>
